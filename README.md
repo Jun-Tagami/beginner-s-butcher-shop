@@ -6,7 +6,7 @@
 | ----------------------  | -------- | -------------------------- |
 | company-name            | string   | null: false                |
 | company-tel             | string   | null: false                |
-| email                   | string   | null: false, unique: false |
+| email                   | string   | null: false, unique: true  |
 | zip-code                | string   | null: false                |
 | preferences_id          | integer  | null: false                |
 | address                 | string   | null: false                |
