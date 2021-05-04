@@ -1,0 +1,78 @@
+<mxfile host="65bd71144e" modified="2021-05-03T22:24:33.965Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="UZb8e3iMGDXnb4_u-b2D" version="13.10.0" type="embed" pages="2">
+    <diagram id="hfToS-bDIWEnh0XIH3uD" name="ページ1">
+        <mxGraphModel dx="971" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" value="users" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="30" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="company-name (string型,NOT NULL)&#10;company-tel (string型, NOT NULL)&#10;email (string型, NOT NULL)&#10;zip-code (string型, NOT NULL)&#10;preferences (string型, NOT NULL)&#10;address (string型, NOT NULL)&#10;encrypted-password (string型, NOTNULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="9">
+                    <mxGeometry y="26" width="240" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-10" value="items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="30" width="260" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-11" value="item-name (string型, NOT NULL)&#10;amount (string型, NOT NULL)&#10;price (integer型, NOT NULL)&#10;detail (text型, NOT NULL)&#10;locality (string型, NOT NULL)&#10;expiry-date (string型, NOT NULL)&#10;preservation (string型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="CzR_rL5oW1h_GJkthz_w-10">
+                    <mxGeometry y="26" width="260" height="114" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-14" value="addresses" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="260" width="260" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-15" value="zip-code (string型, NOT NULL)&#10;preferences (integer型, NOT NULL)&#10;address (stiring型, NOT NULL)&#10;order (preferences型)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="CzR_rL5oW1h_GJkthz_w-14">
+                    <mxGeometry y="26" width="260" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-19" value="reserves" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="270" width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-20" value="user (references型）&#10;item (references型)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="CzR_rL5oW1h_GJkthz_w-19">
+                    <mxGeometry y="26" width="240" height="114" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-26" value="" style="fontSize=12;html=1;endArrow=ERone;endFill=0;targetPerimeterSpacing=6;sourcePerimeterSpacing=6;startArrow=ERone;startFill=0;exitX=0.994;exitY=0.14;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="269.03999999999996" y="355.96000000000004" as="sourcePoint"/>
+                        <mxPoint x="500" y="356" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-28" value="" style="fontSize=12;html=1;endArrow=ERone;endFill=1;startArrow=ERoneToMany;startFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="CzR_rL5oW1h_GJkthz_w-19">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="189.5" y="250" as="sourcePoint"/>
+                        <mxPoint x="189.5" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-29" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;startFill=0;endFill=0;entryX=-0.006;entryY=0.31;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="CzR_rL5oW1h_GJkthz_w-15">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="270" y="135" as="sourcePoint"/>
+                        <mxPoint x="500" y="281" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-37" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERone;entryX=-0.012;entryY=0.675;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERone;startFill=0;endFill=0;" edge="1" parent="1" target="CzR_rL5oW1h_GJkthz_w-11">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="270" y="320" as="sourcePoint"/>
+                        <mxPoint x="370" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-38" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERone;startFill=0;" edge="1" parent="1" target="CzR_rL5oW1h_GJkthz_w-11">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="760" y="470" as="sourcePoint"/>
+                        <mxPoint x="760" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-41" value="reserves" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="400" width="260" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-42" value="name (stirng型, NOT NULL)&#10;encrypted-password (string型, NOT NULL)&#10;amount_id (integer型, NOT NULL)&#10;payment_id (interger型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="CzR_rL5oW1h_GJkthz_w-41">
+                    <mxGeometry y="26" width="260" height="114" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="iRuMu5GTt8IYzdthJHjW" name="ページ2">
+        <mxGraphModel dx="729" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="LGRJBsweqkGXAYnV-NYi-0"/>
+                <mxCell id="LGRJBsweqkGXAYnV-NYi-1" parent="LGRJBsweqkGXAYnV-NYi-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
