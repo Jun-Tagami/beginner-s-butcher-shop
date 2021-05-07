@@ -33,7 +33,7 @@
 
 ### Association
 
-- belongs_to :reserve
+- has_one :reserve
 - belongs_to :owner
 
 ## reserves テーブル
@@ -44,15 +44,15 @@
 | item          | references | null: false, foreign_key: true |
 | amount_id     | integer    | null: false                    |
 | payment_id    | integer    | null: false                    |
-| hope_date      | integer    |                                |
-| hope_time      | integer    |                                |
+| hope_date     | integer    |                                |
+| hope_time     | integer    |                                |
 | address       | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_one :item
-- has_one :address
+- belongs_to :item
+- belongs_to :address
 
 
 # addresses テーブル
@@ -67,7 +67,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :reserve
+- has_one :reserve
 
 ## owner テーブル
 
