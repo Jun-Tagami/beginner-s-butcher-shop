@@ -13,7 +13,6 @@
 | encrypted_password      | string   | null: false                |
 
 
-
 ### Association
 
 - has_many :addresses
@@ -34,8 +33,8 @@
 
 ### Association
 
-- belongs_to :kajiyama
-- has_one :order
+- belongs_to :reserve
+- belongs_to :owner
 
 ## reserves テーブル
 
@@ -45,6 +44,9 @@
 | item          | references | null: false, foreign_key: true |
 | amount_id     | integer    | null: false                    |
 | payment_id    | integer    | null: false                    |
+| hope_date      | integer    |                                |
+| hope_time      | integer    |                                |
+| address       | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -61,12 +63,22 @@
 | preferences_id    | integer    | null: false                    |
 | address           | string     | null: false                    |
 | user              | references | null: false, foreign_key: true |
-| reserves          | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_one :reserve
+- belongs_to :reserve
+
+## owner テーブル
+
+| Column                | Type      | Options                        |
+| --------------------- | ----------| ------------------------------ |
+| name                  | string    | null: false                    |
+| encrypted_password    | string    | null: false                    |
+
+### Association
+
+- has_many :items
 
 
 
