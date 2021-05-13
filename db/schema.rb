@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_05_10_105002) do
     t.string "company_tel", null: false
     t.string "email", default: "", null: false
     t.string "zip_code", null: false
-    t.integer "preferences_id", null: false
+    t.integer "prefecture_id", null: false
     t.string "address", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

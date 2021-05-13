@@ -14,6 +14,7 @@
         <div class="nav">
           <% if user_signed_in? %>
             <div class="navigation">
+              <%= link_to current_user.company_name, "#", class: "user-name" %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
             </div>
@@ -35,11 +36,11 @@
           <ul class="menu">
             <!-- <li class="detail"><a href="#">preferences</a></li>
             <li class="detail"><a href="#">information</a></li> -->
-            <li class="detail"><a href="#">牛肉</a></li>
-            <li class="detail"><a href="#">豚肉</a></li>
-            <li class="detail"><a href="#">鶏肉</a></li>
-            <li class="detail"><a href="#">その他</a></li>
-            <li class="detail"><a href="https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/">配送について</a></li>
+            <li><%= link_to "牛肉", "#", class: :detail %></li>
+            <li><%= link_to "豚肉", "#", class: :detail %></li>
+            <li><%= link_to "鶏肉", "#", class: :detail %></li>
+            <li><%= link_to "その他", "#", class: :detail %></li>
+            <li><%= link_to "配送について", "https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/", class: :detail %></li>
           </ul>
         </div>
       </div>
@@ -361,13 +362,13 @@
         <li><a href="#"><i class="fab fa-line fa-4x"></i></a></li>
       </ul>
       <ul class=footer>
-        <li class="detail"><a href="#">company</a></li>
+        <%# <li class="detail"><a href="#">company</a></li> %>
         <!-- <li class="detail"><a href="#">最新情報</a></li> -->
-        <li class="detail"><a href="#">beef</a></li>
-        <li class="detail"><a href="#">pork</a></li>
-        <li class="detail"><a href="#">chicken</a></li>
-        <li class="detail"><a href="#">other</a></li>
-        <li class="detail"><a href="#">shipping</a></li>
+        <li><%= link_to "beef", "#", class: :detail %></li>
+        <li><%= link_to "pork", "#", class: :detail %></li>
+        <li><%= link_to "chicken", "#", class: :detail %></li>
+        <li><%= link_to "others", "#", class: :detail %></li>
+        <li><%= link_to "shipping", "#", class: :detail %></li>
       </ul>
       <p>Copyright(C) Meet Lab Kajiyama ALL RIGHTS RESERVED.</p>
     </footer>

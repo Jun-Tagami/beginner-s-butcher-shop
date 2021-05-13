@@ -7,9 +7,9 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]/ }
     validates :address
-    validates :company_name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
-    validates :company_tel, format: { with: /\A\d{10,11}\z/}
-    validates :zip_code, format: { with: /\A\d{3}-\d{4}\z/ }
+    validates :company_name
+    validates :company_tel, format: { with: /\A\d{,11}\z/ }
+    validates :zip_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
     validates :prefecture_id, numericality: { other_than: 1 }
   end
 
