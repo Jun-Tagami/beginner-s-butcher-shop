@@ -6,12 +6,11 @@
 | ----------------------  | -------- | -------------------------- |
 | company-name            | string   | null: false                |
 | company-tel             | string   | null: false                |
-| email                   | string   | null: false, unique: false |
+| email                   | string   | null: false, unique: true  |
 | zip-code                | string   | null: false                |
 | preferences_id          | integer  | null: false                |
 | address                 | string   | null: false                |
 | encrypted_password      | string   | null: false                |
-
 
 
 ### Association
@@ -34,8 +33,8 @@
 
 ### Association
 
-- belongs_to :kajiyama
-- has_one :order
+- has_one :reserve
+- belongs_to :owner
 
 ## reserves テーブル
 
@@ -45,12 +44,15 @@
 | item          | references | null: false, foreign_key: true |
 | amount_id     | integer    | null: false                    |
 | payment_id    | integer    | null: false                    |
+| hope_date     | integer    |                                |
+| hope_time     | integer    |                                |
+| address       | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_one :item
-- has_one :address
+- belongs_to :item
+- belongs_to :address
 
 
 # addresses テーブル
@@ -61,12 +63,22 @@
 | preferences_id    | integer    | null: false                    |
 | address           | string     | null: false                    |
 | user              | references | null: false, foreign_key: true |
-| reserves          | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - has_one :reserve
+
+## owner テーブル
+
+| Column                | Type      | Options                        |
+| --------------------- | ----------| ------------------------------ |
+| name                  | string    | null: false                    |
+| encrypted_password    | string    | null: false                    |
+
+### Association
+
+- has_many :items
 
 
 
