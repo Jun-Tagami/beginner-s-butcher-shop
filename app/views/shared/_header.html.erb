@@ -1,0 +1,24 @@
+<header>
+  <div class="heading">
+    <%= link_to image_tag("logo1.jpg", class: :title), root_path %>
+    <%= link_to image_tag("logo2.jpg", class: :title2), root_path %>
+  </div>
+    <div class="nav">
+      <% if user_signed_in? %>
+        <div class="navigation">
+          <%= link_to current_user.company_name, "#", class: "user-name" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+          <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        </div>
+      <% else %>
+      <%# // ログインしているときは上記を表示するようにしましょう %>
+      <%# ログインしていないときは以下を表示するようにしましょう %>
+        <div class="navigation">
+          <%= link_to "ログイン", new_user_session_path, class: :details %>
+          <%= link_to "新規登録", new_user_registration_path, class: :details %>
+          <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        </div>
+      <% end %>
+      <%# // ログインしていないときは上記を表示するようにしましょう %>
+    </div>
+</header>
