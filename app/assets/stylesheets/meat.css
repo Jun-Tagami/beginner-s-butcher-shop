@@ -46,7 +46,7 @@ header a {
   color: brown;
 }
 
-/* menuとカート */
+/* 会員登録とカート */
 .nav {
   width: 50%;
 }
@@ -85,7 +85,7 @@ header a {
   margin: 0 auto;
 }
 
-.menu a {
+.detail {
   text-decoration: none;
   color: white;
 }
@@ -233,7 +233,7 @@ header a {
 }
 
 .calender span {
-  color: FF6666;
+  color: #FF6666;
 }
 
 .calender p {
@@ -295,11 +295,13 @@ footer p {
 .fa-facebook-square {
   color: #315096;
   background-color: white;
+  height: 95%;
 }
 
 .fa-twitter-square {
   color: #55acee;
   background-color: white;
+  height: 95%;
 }
 
 
@@ -338,4 +340,5 @@ footer p {
 .fa-line {
   color: #00c300;
   background-color: white;
+  height: 95%;
 }

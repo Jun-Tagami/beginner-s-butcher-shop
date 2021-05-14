@@ -8,9 +8,9 @@
     </h1>
   </div>
 
-  <%# < render 'shared/error_messages', model: f.object %><div class="form-group">
-    <div class="form-group">  
-      <div class='form-text-wrap'>
+  <%= render 'shared/error_messages', model: f.object %>
+  <div class="form-group">  
+    <div class='form-text-wrap'>
       <label class="form-text">会社名</label>
       <span class="indispensable">必須</span>
     </div>
@@ -50,8 +50,7 @@
       <label class="form-text">都道府県</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :preferences_id, class:"input-default", id:"preferences_id", placeholder:"例）北海道", maxlength:"8" %>
-    <%# < f.collection_select(:delivery_area_id, DeliveryArea.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) > %>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"input-default", id:"user-prefecture"}) %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
