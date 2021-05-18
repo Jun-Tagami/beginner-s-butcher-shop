@@ -1,0 +1,114 @@
+/* リセットCSS */
+body {
+  font-family: serif;
+  font-size: 14px;
+  color: black;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* container */
+.main {
+  text-align: center;
+}
+
+.main2 h1 {
+  margin: 2.5% 10% 2.5%;
+  font-size: 200%;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.item {
+  margin-left: 60px;
+  margin-right: 60px;
+  flex-wrap: wrap;
+}
+
+.item-image {
+  height: 180px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.item-detail {
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.item-detail li {
+  list-style: none;
+}
+
+.price {
+  color: red;
+  font-size: 120%;
+}
+
+.kg {
+  width: 20%;
+}
+
+.kg, .sum_price {
+  margin: 5% 2%;
+}
+
+.reserve-btn-contents {
+  margin-bottom: 20%;
+}
+
+
+
+/* i pad */
+@media screen and (min-width: 600px) {
+  .items {
+    flex-wrap: wrap;
+    /* display: block; */
+  }
+
+  .item-image {
+    height: 160px;
+    width: 210px;
+    margin-bottom: 20px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .footer a, .menu li, .navigation li {
+    font-size: 14px;
+  }
+
+  .nav {
+    width: 70%;
+  }
+  
+  .title {
+    width: 50px;
+  }
+
+  .title2 {
+    width: 180px;
+  }
+
+  .heading {
+    margin-top: 10px;
+  }
+
+  
+}

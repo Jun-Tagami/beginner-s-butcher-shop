@@ -3,22 +3,35 @@
     <%= link_to image_tag("logo1.jpg", class: :title), root_path %>
     <%= link_to image_tag("logo2.jpg", class: :title2), root_path %>
   </div>
-    <div class="nav">
-      <% if user_signed_in? %>
-        <div class="navigation">
-          <%= link_to current_user.company_name, "#", class: "user-name" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-          <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-        </div>
-      <% else %>
-      <%# // ログインしているときは上記を表示するようにしましょう %>
-      <%# ログインしていないときは以下を表示するようにしましょう %>
-        <div class="navigation">
-          <%= link_to "ログイン", new_user_session_path, class: :details %>
-          <%= link_to "新規登録", new_user_registration_path, class: :details %>
-          <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-        </div>
-      <% end %>
-      <%# // ログインしていないときは上記を表示するようにしましょう %>
-    </div>
+  <div class="nav">
+    <% if user_signed_in? %>
+      <div class="navigation">
+        <%= link_to current_user.company_name, "#", class: "user-name" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+        <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+      </div>
+    <% else %>
+    <%# // ログインしているときは上記を表示するようにしましょう %>
+    <%# ログインしていないときは以下を表示するようにしましょう %>
+      <div class="navigation">
+        <%= link_to "ログイン", new_user_session_path, class: :details %>
+        <%= link_to "新規登録", new_user_registration_path, class: :details %>
+        <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+      </div>
+    <% end %>
+    <%# // ログインしていないときは上記を表示するようにしましょう %>
+  </div>
 </header>
+<div class="head_content">
+  <div class="navbar">
+    <ul class="menu">
+      <!-- <li class="detail"><a href="#">preferences</a></li>
+      <li class="detail"><a href="#">information</a></li> -->
+      <li><%= link_to "牛肉", "#", class: :detail %></li>
+      <li><%= link_to "豚肉", "#", class: :detail %></li>
+      <li><%= link_to "鶏肉", "#", class: :detail %></li>
+      <li><%= link_to "その他", "#", class: :detail %></li>
+      <li><%= link_to "配送について", "https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/", class: :detail %></li>
+    </ul>
+  </div>
+</div>
