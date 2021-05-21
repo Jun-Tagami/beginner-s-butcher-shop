@@ -7,6 +7,7 @@
     <% if user_signed_in? %>
       <div class="navigation">
         <%= link_to current_user.company_name, "#", class: "user-name" %>
+        <%= link_to current_user.company_name, "/users/#{current_user.id}", class: "user-name" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
         <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
       </div>

@@ -18,6 +18,7 @@
               <%# </div>
             </div>
           <% end %>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
         <%# </li>
       <% end %> 
       <div class="items">
@@ -27,6 +28,28 @@
             <li>商品名：XXX</li>
             <li>1kg当たり</li>
             <li class="price">2500円</li>
+          </ul>
+          <input class="kg">kg
+          <input class="sum_price">円
+          <div class="reserve-btn-contents">
+            <button>カートへ追加</button>
+          </div>
+          <div class="reserve-btn-contents">
+            <button>カートへ進む</button>
+          </div>
+        </div>
+    </header>
+    <div class="contents">
+      <div class="head_content">
+        <div class="navbar">
+          <ul class="menu">
+            <!-- <li class="detail"><a href="#">preferences</a></li>
+            <li class="detail"><a href="#">information</a></li> -->
+            <li><%= link_to "牛肉", "#", class: :detail %></li>
+            <li><%= link_to "豚肉", "#", class: :detail %></li>
+            <li><%= link_to "鶏肉", "#", class: :detail %></li>
+            <li><%= link_to "その他", "#", class: :detail %></li>
+            <li><%= link_to "配送について", "https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/", class: :detail %></li>
           </ul>
           <input class="kg">kg
           <input class="sum_price">円
