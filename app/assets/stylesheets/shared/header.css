@@ -1,0 +1,118 @@
+/*ここからheader*/
+header {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  width: 70%;
+  margin-left: 4%;
+  text-decoration: none;
+}
+
+
+
+/* title */
+.title {
+  width: 8%;
+  margin: 1% 0;
+}
+
+.title2 {
+  width: 30%;
+  margin: 1%;
+}
+
+header a {
+  text-decoration: none;
+  color: brown;
+}
+
+/* 会員登録とカート */
+.nav {
+  width: 50%;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.details {
+  font-size: 120%;
+}
+
+/* ここからcontents */
+.contents {
+  text-align: center;
+  margin-bottom: 6%;
+}
+
+/* 詳細画面 */
+.head_content {
+  background-color: black;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  padding: 1% 0; 
+}
+
+.menu li {
+  list-style: none;
+  font-size: 120%;
+  margin: 0 auto;
+}
+
+.detail {
+  text-decoration: none;
+  color: white;
+}
+
+/* menuとカート */
+.nav {
+  width: 50%;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navigation li {
+  font-size: 120%;
+}
+
+
+/* ここからcontents */
+.contents {
+  text-align: center;
+  margin-bottom: 6%;
+}
+
+/* 詳細画面 */
+.head-content {
+  background-color: black;
+  /* width: 100%; */
+}
+
+.menu {
+  display: flex;
+  padding: 1% 0; 
+}
+
+.menu li {
+  list-style: none;
+  font-size: 120%;
+  margin: 0 auto;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
