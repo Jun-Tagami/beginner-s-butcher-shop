@@ -61,7 +61,16 @@ class User::RegistrationsController < Devise::RegistrationsController
   # end
   before_action :configure_account_update_params, only: [:update]
 
-
+  def update
+    binding.pry
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to edit_user_path
+    else
+      render :edit
+    end
+  end
+  
   protected
   # 追加(必須)
   def update_resource(resource, params)
