@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   get 'items/index'
   devise_for :users
   root to: 'items#index'
 =======
+=======
+>>>>>>> Stashed changes
   # devise_for :users, controllers: {
   #   sessions: "users/sessions",
   #   registrations: "users/registrations"
