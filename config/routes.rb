@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'home#index'
-  resources :home, only: [:index]
-  get 'items/index'
-  devise_for :users
-  root to: 'items#index'
   # devise_for :users, controllers: {
   #   sessions: "users/sessions",
   #   registrations: "users/registrations"
