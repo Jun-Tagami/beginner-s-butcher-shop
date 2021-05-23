@@ -62,7 +62,7 @@ class User::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # protected
-  # # 追加(必須)
+  # 追加(必須)
   # def update_resource(resource, params)
   #   resource.update_without_password(params)
   # end
@@ -73,7 +73,7 @@ class User::RegistrationsController < Devise::RegistrationsController
   # end
 
   # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:company_name, :company_tel, :zip_code, :prefecture_id, :address])
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:company_name, :company_tel, :zip_code, :prefecture_id, :address、:company_tel])
   # end
 
 end
