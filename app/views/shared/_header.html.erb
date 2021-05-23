@@ -6,7 +6,8 @@
   <div class="nav">
     <% if user_signed_in? %>
       <div class="navigation">
-        <%= link_to current_user.company_name, "/users/#{current_user.id}", class: "user-name" %>
+        <%= link_to "owner専用", new_item_path, class: :owner %>
+        <%= link_to current_user.company_name, "/users/#{current_user.id}", class: :user_name %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
         <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
       </div>
@@ -23,15 +24,13 @@
   </div>
 </header>
 <div class="head_content">
-  <div class="navbar">
-    <ul class="menu">
-      <!-- <li class="detail"><a href="#">preferences</a></li>
-      <li class="detail"><a href="#">information</a></li> -->
-      <li><%= link_to "牛肉", "#", class: :detail %></li>
-      <li><%= link_to "豚肉", "#", class: :detail %></li>
-      <li><%= link_to "鶏肉", "#", class: :detail %></li>
-      <li><%= link_to "その他", "#", class: :detail %></li>
-      <li><%= link_to "配送について", "https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/", class: :detail %></li>
-    </ul>
+  <div class="menu">
+    <!-- <li class="detail"><a href="#">preferences</a></li>
+    <li class="detail"><a href="#">information</a></li> -->
+    <%= link_to "牛肉", "#", class: :detail %>
+    <%= link_to "豚肉", "#", class: :detail %>
+    <%= link_to "鶏肉", "#", class: :detail %>
+    <%= link_to "その他", "#", class: :detail %>
+    <%= link_to "配送について", "https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/", class: :detail %></li>
   </div>
 </div>
