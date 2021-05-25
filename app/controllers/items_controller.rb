@@ -2,9 +2,7 @@ class ItemsController < ApplicationController
   def index
     @items = Item.order('created_at DESC')
   end
-<<<<<<< Updated upstream
-=======
-
+  
   def new
     @item = Item.new
   end
@@ -26,5 +24,4 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation)
   end
->>>>>>> Stashed changes
 end
