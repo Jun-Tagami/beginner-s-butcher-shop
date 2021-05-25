@@ -24,5 +24,17 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation)
   end
+
+  def new
+    # @item = Item.new
+  end
+
+  def create
+    @item = Item.find(params[:id])
+    if @item.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
 end
-######テスト　田上が編集しました。

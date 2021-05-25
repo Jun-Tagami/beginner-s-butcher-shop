@@ -59,22 +59,21 @@ class User::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-  before_action :configure_account_update_params, only: [:update]
+  # before_action :configure_account_update_params, only: [:update]
 
-
-  protected
+  # protected
   # 追加(必須)
-  def update_resource(resource, params)
-    resource.update_without_password(params)
-  end
+  # def update_resource(resource, params)
+  #   resource.update_without_password(params)
+  # end
 
-  # 必須ではないがupdate後にtop画面にリダイレクトするメソッド
-  def after_update_path_for(_resource)
-    edit_user_path
-  end
+  # # 必須ではないがupdate後にtop画面にリダイレクトするメソッド
+  # def after_update_path_for(_resource)
+  #   edit_user_path
+  # end
 
-  def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:company_name, :company_tel, :zip_code, :prefecture_id, :address])
-  end
+  # def configure_account_update_params
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:company_name, :company_tel, :zip_code, :prefecture_id, :address、:company_tel])
+  # end
 
 end
