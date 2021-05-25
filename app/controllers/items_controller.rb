@@ -25,3 +25,4 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation)
   end
 end
+######テスト　田上が編集しました。

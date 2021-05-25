@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+
+<%# 登録者の詳細 %>
+<div class="user-show">
+  <div class="user-box">
+    <%= link_to "会員情報の編集", edit_user_path, method: :get, class: "user-red-btn" %>
+      <p class="or-text">or</p>
+    <%= link_to "退会", user_path, method: :delete, class:"user-destroy" %> 
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-company">会社名</th>
+          <td class="detail-value"><%= @user.company_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-company">メールアドレス</th>
+          <td class="detail-value"><%= @user.email %></td>
+        </tr>
+        <tr>
+          <th class="detail-company">郵便番号</th>
+          <td class="detail-value"><%= @user.zip_code %></td>
+        </tr>
+        <tr>
+          <th class="detail-company">都道府県</th>
+          <td class="detail-value"><%= @user.prefecture.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-company">市町村以下</th>
+          <td class="detail-value"><%= @user.address %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%# /登録者の詳細 %>
+
+<%= render "shared/footer" %>
