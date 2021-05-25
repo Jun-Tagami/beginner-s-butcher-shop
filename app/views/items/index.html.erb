@@ -3,6 +3,7 @@
   <div class="main2">
     <div class="beef">
       <h1><b>輸入／牛肉</b></h1>
+<<<<<<< Updated upstream
       <%# <% @items.each do |item| %>
         <%# <li class='list'>
           <%= link_to item_path(item.id), method: :get do %>
@@ -98,6 +99,36 @@
           <div class="reserve-btn-contents">
             <button>カートへ進む</button>
           </div>
+=======
+      <div class='item-contents'>
+        <ul class="item-lists">
+          <% @items.each do |item| %>
+            <li class='list'>
+              <%= link_to items_path(item.id), method: :get do %>
+                <div class='item-img-content'>
+                  <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" if item.image.attached? %>
+                </div>
+                <div class='item-info'>
+                  <h3 class='item-name'>
+                    <%= item.name %>
+                  </h3>
+                  <div class='item-price'>
+                    <span>1kg当たり</span>
+                    <span><%= item.price %>円</span>
+                  </div>
+                  <div class="reserve-btn-contents">
+                    <button>カートへ追加</button>
+                  </div>
+                  <div class="reserve-btn-contents">
+                    <button>カートへ進む</button>
+                  </div>
+                </div>
+              <% end %>
+              <%# <% // ログインしていないときは上記を表示するようにしましょう %>
+            </li>
+          <% end  %>
+        </ul>
+>>>>>>> Stashed changes
       </div>
     </div>
   </div>
