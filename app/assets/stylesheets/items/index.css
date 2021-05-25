@@ -27,50 +27,34 @@ ul,li {
   font-size: 200%;
 }
 
-.items {
+.item-lists {
   display: flex;
   justify-content: center;
-  margin-bottom: 10%;
-}
-
-.item {
-  margin-left: 60px;
-  margin-right: 60px;
   flex-wrap: wrap;
 }
 
-.item-image {
-  height: 180px;
-  width: 250px;
-  cursor: pointer;
-}
-
-.item-detail {
-  font-weight: bold;
-  font-size: 100%;
-}
-
-.item-detail li {
+.item-info {
   list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  font-size: 110%;
+  font-weight: bold;
 }
 
-.price {
-  color: red;
-  font-size: 120%;
+.list {
+  list-style: none;
+  font-size: 110%;
+  margin: 3% 6%;
 }
 
-.kg {
-  width: 20%;
-}
-
-.kg, .sum_price {
-  margin: 5% 2%;
+.item-price {
+  margin-bottom: 20%;
 }
 
 .reserve-btn-contents {
   margin-bottom: 20%;
 }
-
 
 
 /* i pad */

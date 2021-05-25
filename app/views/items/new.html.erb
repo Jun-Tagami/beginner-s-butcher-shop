@@ -48,7 +48,8 @@
           内容量
           <span class="indispensable">必須</span>
         </div>
-        <%# <%= f.collection_select(:category_id, Amount.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <%= f.text_area :amount, class:"items-text", id:"amount", placeholder:"1kg,100g,他（必須 40文字まで)", maxlength:"40" %>
+        <span class="sell-yen">当たり</span>
       </div>
     </div>
     <%# /内容量 %>
@@ -80,21 +81,26 @@
           産地
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :name, class:"items-text", id:"item-locality", placeholder:"産地名（必須 40文字まで)", maxlength:"40" %>
+        <%= f.text_area :locality, class:"items-text", id:"item-locality", placeholder:"産地名（必須 40文字まで)", maxlength:"40" %>
         <div class="weight-bold-text">
           保存方法
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :name, class:"items-text", id:"item-preservation", placeholder:"保存方法（必須 40文字まで)", maxlength:"40" %>
+        <%= f.text_area :preservation, class:"items-text", id:"item-preservation", placeholder:"保存方法（必須 40文字まで)", maxlength:"40" %>
         <div class="weight-bold-text">
           消費期限
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :name, class:"items-text", id:"item-expiry-date", placeholder:"消費期限（必須 40文字まで)", maxlength:"40" %>
+        <%= f.text_area :expiry_date, class:"items-text", id:"item-expiry-date", placeholder:"消費期限（必須 40文字まで)", maxlength:"40" %>
       </div>
     </div>
-  </div>  
-    <%# /商品の詳細 %>
+    <div class="sell-btn-contents">
+      <%= f.submit "出品する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>  
+  <%# /商品の詳細 %>
 
 </div>
 
