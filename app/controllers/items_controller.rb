@@ -24,5 +24,4 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation)
   end
-
 end
