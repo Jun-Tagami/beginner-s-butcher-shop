@@ -65,9 +65,9 @@
         </div>
         
       </div>
-      <a href="beef-parts.html">
-        <button>もっと詳しく</button>
-      </a>
+      <div class="button">
+        <%= link_to "もっと詳しく", items_path(category_id: 2) %>
+      </div>
     </div>
 
     <div class="pork">
@@ -101,9 +101,9 @@
           </ul>
         </div>
       </div>
-      <a href="pork-parts.html">
-        <button>もっと詳しく</button>
-      </a>
+      <div class="button">
+        <%= link_to "もっと詳しく", items_path(category_id: 3) %>
+      </div>
     </div>
 
     <div class="chicken">
@@ -137,9 +137,9 @@
           </ul>
         </div>
       </div>
-      <a href="chicken-parts.html">
-        <button>もっと詳しく</button>
-      </a>
+      <div class="button">
+        <%= link_to "もっと詳しく", items_path(category_id: 4) %>
+      </div>
     </div>
   </div>
 </div>

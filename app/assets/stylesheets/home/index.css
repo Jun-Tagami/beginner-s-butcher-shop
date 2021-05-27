@@ -99,16 +99,23 @@ ul,li {
   font-size: 120%;
 }
 
-.container button {
+.button {
   background-color: black;
-  color: white;
   cursor: pointer;
   border-bottom: 5px solid black;
   font-family: serif;
   margin-bottom: 5%;
+  display: inline-block;
+  width: 12%;
 }
 
-.container button:hover {
+.button a {
+  text-decoration: none;
+  color: white;
+  padding: 15% 5%;
+}
+
+.button:hover {
   margin-top: 3px;
   color: white;
   background: gray;
