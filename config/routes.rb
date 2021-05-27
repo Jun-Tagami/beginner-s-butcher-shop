@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :users, only: [:show, :edit, :update, :destroy]
 
-  resources :items, only: [:index, :new, :create]
+  resources :items, only: [:index, :new, :create, :show]
   # namespace :items do
-  #   resources :import_beef, :import_pork, :import_chicken, :other, national_beef, :national_pork, :national_chicken
+  #   resources :import_beef, :import_pork, :import_chicken, :other, :national_beef, :national_pork, :national_chicken
   # end
 
 end
