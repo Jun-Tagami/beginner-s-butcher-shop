@@ -7,7 +7,7 @@ class CreateReserves < ActiveRecord::Migration[6.0]
       t.integer :payment_id
       t.integer :hope_date
       t.integer :hope_time
-      t.address :references, null: false, foreign_key: true
+      t.references :address, null: false, foreign_key: true
 
       t.timestamps
     end
