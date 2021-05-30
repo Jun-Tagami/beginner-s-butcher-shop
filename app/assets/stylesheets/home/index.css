@@ -102,11 +102,12 @@ ul,li {
 .button {
   background-color: black;
   cursor: pointer;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid rgb(71, 69, 69);
   font-family: serif;
   margin-bottom: 5%;
   display: inline-block;
-  width: 12%;
+  width: 10%;
+  border-radius: 30px;
 }
 
 .button a {
