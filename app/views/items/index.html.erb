@@ -1,24 +1,41 @@
 <%= render "shared/header" %>
+<%= form_with model: @item, url: items_path, class: 'item-main', local: true do |f| %>
 <div class="main">
   <div class="main2">
     <div class="beef">
-      <h1><b>輸入／牛肉</b></h1>
+      <h1><b>商品一覧</b></h1>
       <div class='item-contents'>
         <ul class="item-lists">
           <% @items.each do |item| %>
             <li class='list'>
-              <%= link_to items_path(item.id), method: :get do %>
+              <%= link_to item_path(item.id), method: :get do %>
                 <div class='item-img-content'>
                   <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" if item.image.attached? %>
                 </div>
-                <div class='item-info'>
-                  <h3 class='item-name'>
-                    <%= item.name %>
-                  </h3>
-                  <div class='item-price'>
-                    <span>1kg当たり</span>
-                    <span><%= item.price %>円</span>
+              <% end %>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= item.name %>
+                </h3>
+                <div class='item-price'>
+                  <span>1kg当たり</span>
+                  <span><%= item.price %>円</span>
+                </div>
+                <div class="price-content">
+                  <div class="price-text">
+                    <span>数量</span>
+                    <span class="indispensable">必須</span>
                   </div>
+                  <%# <%= f.collection_select(:reserveAmount_id, reserveAmount.all, :id, :name, {}, {class:"input-default", id:"item-amount"}) %>
+                  <%# <%= f.text_field :amount, class:"amount-input", id:"item-amount", placeholder:"例）15" %>
+                </div>
+                <%# <div class="price-content">
+                  <span>合計金額</span>
+                  <span>
+                    <span id='sum-price'></span>
+                  </span>
+                </div> %>
+                <div class="btn">
                   <div class="reserve-btn-contents">
                     <button>カートへ追加</button>
                   </div>
@@ -26,7 +43,7 @@
                     <button>カートへ進む</button>
                   </div>
                 </div>
-              <% end %>
+              </div>
               <%# <% // ログインしていないときは上記を表示するようにしましょう %>
             </li>
           <% end  %>
@@ -35,5 +52,6 @@
     </div>
   </div>
 </div>
+<% end %>
 <%= render "shared/footer" %>
 

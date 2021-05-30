@@ -8,6 +8,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :locality, null: false
       t.string :expiry_date, null: false
       t.string :preservation, null: false
+      t.integer :category_id, null: false
 
       t.timestamps
     end
