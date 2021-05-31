@@ -1,0 +1,312 @@
+<%= render "shared/header" %>
+<div class="contents">
+  <div class="top">
+    <div class="top_content">
+      <h1 class="top_title">輸入/Import</h1>
+      <%= link_to image_tag("top/beef.jpg", class: :top_image), items_path(category_id: 2) %>
+      <%= link_to image_tag("top/pork.jpg", class: :top_image), items_path(category_id: 3) %>
+      <%= link_to image_tag("top/chicken.jpg", class: :top_image), items_path(category_id: 4) %>
+    </div>
+    <div class="top_content2">
+      <h1 class="top_title">国産/National</h1>
+      <%= link_to image_tag("top/beef.jpg", class: :top_image), items_path(category_id: 5) %>
+      <%= link_to image_tag("top/pork.jpg", class: :top_image), items_path(category_id: 6) %>
+      <%= link_to image_tag("top/chicken.jpg", class: :top_image), items_path(category_id: 7) %>
+    </div>
+    <div class="top_content2">
+      <h1 class="top_title">馬肉・その他/horsemeat・others</h1>
+      <%= link_to image_tag("top/other1.png", class: :top_image), items_path(category_id: 8) %>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="preferences">
+      <h1><b>こだわり</b></h1>
+      <a>元食肉専門の商社マンだから築けた特殊のルートで<br>
+      他社よりもお手頃な価格での販売を実現。<br>
+      海外からの輸入商品を中心に、国内産の商品も充実！<br>
+      自分の目で、その日に質の高いものだけを仕入れるので、<br>
+      味、鮮度には自信があります！！<br>
+      某有名ラーメン店を顧客に持つなど、現在卸先業者拡大中！！<br>
+      是非一度お試しあれ！</a>
+    </div>
+
+    <div class="beef">
+      <h1><b>輸入／牛肉</b></h1>
+      <div class="products">
+        <div class="product">
+          <%= link_to image_tag("beef.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no1.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+        
+        <div class="product">
+          <ul class="product_detail">
+            <%= link_to image_tag("beef2.jpg", class: :product_image), root_path %>
+            <%= link_to image_tag("no2.jpg", class: :popular_image), root_path %>
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+        
+        <div class="product">
+          <%= link_to image_tag("beef.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no3.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="button">
+        <%= link_to "もっと詳しく", items_path(category_id: 2) %>
+      </div>
+    </div>
+
+    <div class="pork">
+      <h1><b>輸入／豚肉</b></h1>
+      <div class="products">
+        <div class="product">
+          <%= link_to image_tag("pork1.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no1.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+        <div class="product">
+          <%= link_to image_tag("pork2.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no2.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+        <div class="product">
+          <%= link_to image_tag("pork2.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no3.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+      </div>
+      <div class="button">
+        <%= link_to "もっと詳しく", items_path(category_id: 3) %>
+      </div>
+    </div>
+
+    <div class="chicken">
+      <h1><b>輸入／鶏肉</b></h1>
+      <div class="products">
+        <div class="product">
+          <%= link_to image_tag("chicken.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no1.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+        <div class="product">
+          <%= link_to image_tag("chicken2.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no2.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+        <div class="product">
+          <%= link_to image_tag("chicken.jpg", class: :product_image), root_path %>
+          <%= link_to image_tag("no3.jpg", class: :popular_image), root_path %>
+          <ul class="product_detail">
+            <li>商品名:XXXXXX</li>
+            <li>1kg当たり</li>
+            <li class="price">2500円</li>
+          </ul>
+        </div>
+      </div>
+      <div class="button">
+        <%= link_to "もっと詳しく", items_path(category_id: 4) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="refund">
+  <h1>ご返品・ご返金について</h1>
+  <div class="explain">
+    <div class="text">
+      <p><b>■届いた商品の品質があきらかに悪い場合<br></b>
+      １．商品到着より48時間以内に担当までご連絡下さい。<br>
+      ２．においがある・色が変色している等、<br>
+          あきらかに品質に問題がある場合、<br>
+          開封済み・解凍済みに関わらず、残量分をご返金いたします。<br>
+        （※既に調理使用しているものは返品不可。）<br>
+      <br>
+      思考的な品質の相違に関してのご返品については、下記をご覧下さい。<br>
+      <br>
+      <b>■届いた商品が、自分の思っていたものと違った場合はお客様送料ご負担でご対応いたします。<br></b>
+      ※またお振込み手数料もお客様ご負担となりますこと予めご了承ください。<br>
+      <br>
+      １．商品到着より48時間以内に担当者までご連絡下さい。<br>
+      ２．冷凍品であれば、未解凍の商品のみご返品受け付けます。<br>
+      ３．チルド品であれば、未凍結のみご返品受け付けます。<br>
+      ４．サシ気や品質が、開封しなくても分かる商品の、開封後の返品は受け付けられません。<br>
+      （商品形態によりますので、ご相談下さい）<br>
+      <br>
+
+      ご返品について質問等御座いましたらお気軽にお問い合わせ下さい。<br>
+      <br>
+      冷蔵品と冷凍品がご一緒のご注文の場合は冷凍輸送としてお送りしております。<br>
+      輸送中に冷蔵品が凍結する恐れがあります。<br>
+      お客様の判断でお困りになる場合は別々でお送りいたします。<br>
+      その際はその趣旨をお伝えの上送料を2重に頂戴いたしますことご了承ください。
+      <br>
+      <br>
+      <b>ご返品・ご返金に関するお問いわせ<br></b>
+      tel.044-223-2589<br>
+      email: y.kajiyama@saude.co.jp<br>
+      ※お電話でのご注文は承っておりませんので、予めご了承ください。
+    </p>
+  </div>
+</div>
+
+<div class="calender">
+  <h1>営業日のお知らせ</h2>
+  <a>定休日は商品に関するお問い合わせ、メールでの連絡はお休みとさせていただきます。<br>
+  お問い合わせに関しての回答は、翌営業日とさせていただきますので、予めご了承ください。</a>
+  <div class="container2">
+    <table border="0" cellpadding="2" cellspacing="1" bgcolor="#333333" width="">
+      <tr align="center" bgcolor="#FFFFFF">
+        <td colspan="7">2021年6月</td>
+      </tr>
+      <tr align="center" bgcolor="#CCCCCC">
+        <td>日</td>
+        <td>月</td>
+        <td>火</td>
+        <td>水</td>
+        <td>木</td>
+        <td>金</td>
+        <td>土</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">6</td>
+        <td bgcolor="#FF6666">7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">13</td>
+        <td bgcolor="#FF6666">14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">20</td>
+        <td bgcolor="#FF6666">21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">27</td>
+        <td bgcolor="#FF6666">28</td>
+        <td>29</td>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="2" cellspacing="1" bgcolor="#333333" width="">
+      <tr align="center" bgcolor="#FFFFFF">
+        <td colspan="7">2021年7月</td>
+      </tr>
+      <tr align="center" bgcolor="#CCCCCC">
+        <td>日</td>
+        <td>月</td>
+        <td>火</td>
+        <td>水</td>
+        <td>木</td>
+        <td>金</td>
+        <td>土</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">4</td>
+        <td bgcolor="#FF6666">5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">11</td>
+        <td bgcolor="#FF6666">12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">18</td>
+        <td bgcolor="#FF6666">19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+      </tr>
+      <tr align="center" bgcolor="#FFFFFF">
+        <td bgcolor="#FF6666">25</td>
+        <td bgcolor="#FF6666">26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+      </tr>
+    </table>
+  </div> 
+  <p>※<span>■</span>が定休日です。</p>
+</div>
+<%= render "shared/footer" %>
