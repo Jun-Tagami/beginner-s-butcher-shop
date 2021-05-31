@@ -73,3 +73,21 @@ header {
   font-size: 140%;
 }
 
+.show-lists li {
+  list-style: none;
+  border: 1px solid black;
+}
+
+.show-lists {
+  background-color: white;
+  width: 100px;
+  position: absolute;
+  right: 15%;
+  top: 70px;
+  color: black;
+  font-size: 25px;
+}
+
+.hidden{
+  display: none;
+}
