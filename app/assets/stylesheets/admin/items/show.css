@@ -1,0 +1,13 @@
+.edit, .destroy {
+  background-color: black;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 10%;
+  text-decoration: none;
+  margin-bottom: 10%;
+}
+
+.btn {
+  width: 50%;
+  text-align: center
+}

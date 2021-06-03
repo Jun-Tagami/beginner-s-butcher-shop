@@ -1,0 +1,44 @@
+<header>
+  <div class="heading">
+    <%= link_to image_tag("logo1.jpg", class: :title), owner_index_path %>
+    <%= link_to image_tag("logo2.jpg", class: :title2), owner_index_path %>
+  </div>
+</header>
+<%= form_with model: @item, url: items_path, class: 'item-main', local: true do |f| %>
+<div class="main">
+  <div class="main2">
+    <div class="beef">
+      <h1><b>商品一覧</b></h1>
+      <div class='item-contents'>
+        <ul class="item-lists">
+          <% @items.each do |item| %>
+            <li class='list'>
+              <%= link_to admin_item_path(item.id), method: :get do %>
+                <div class='item-img-content'>
+                  <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" if item.image.attached? %>
+                </div>
+              <% end %>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= item.name %>
+                </h3>
+                <div class='item-price'>
+                  <span>1kg当たり</span>
+                  <span><%= item.price %>円</span>
+                </div>
+              </div>
+              <%# <% // ログインしていないときは上記を表示するようにしましょう %>
+            </li>
+          <% end  %>
+        </ul>
+      </div>
+      <%= link_to(new_admin_item_path, class: 'purchase-btn') do %>
+        <span class='purchase-btn-text'>出品する</span>
+        <%= image_tag 'icon_camera.png' , size: '20x20' ,class: "purchase-btn-icon" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
