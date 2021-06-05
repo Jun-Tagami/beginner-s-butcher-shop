@@ -1,0 +1,22 @@
+h4{
+  text-align: center;
+}
+
+.detail-owner_members {
+  width: 9 00px;
+  background-color: #eee;
+  border: 1px solid #8#dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.back-btn3 {
+ 
+  line-height: 5;
+  background-color: black;
+  height: 10%;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 10px 10%;
+  text-decoration: none;
+}
