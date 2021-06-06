@@ -12,20 +12,23 @@
             <th class="detail-owner_members ">市区町村以下全て</th>
             <th class="detail-owner_members ">電話番号 </th>
           </tr>
-          <tr>
-           <%# <% @items.each do |users| %> 
-            <th class="detail-owner_members ">ID</th>
-            <th class="detail-owner_members ">会社名</th>
-            <th class="detail-owner_members ">メールアドレス</th>
-            <th class="detail-owner_members ">パスワード</th>
-            <th class="detail-owner_members ">郵便番号 </th>
-            <th class="detail-owner_members ">都道府県 </th>
-            <th class="detail-owner_members ">市区町村以下全て</th>
-            <th class="detail-owner_members ">電話番号 </th>
-            <%# <% end %> 
-          </tr>
+
+          <% @users.each do |user| %>   
+        <tr>   
+           <td><%= user.id %> </td>   
+           <td><%= user.company_name  %>  </td>   
+           <td><%= user.email %>  </td>   
+           <td><%= user.email %>  </td>   
+           <td><%= user.zip_code %>  </td>   
+           <td><%= user.prefecture_id %>   </td>   
+           <td><%= user.address %>  </td>   
+           <td><%= user.company_tel %>  </td>   
+         </tr>
+          <% end %>
+          
         </tbody>
       </table>
     <%=link_to 'もどる', root_path, class:"back-btn3" %>
   </div>
 </div>
+
