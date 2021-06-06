@@ -73,7 +73,6 @@ ul,li {
 @media screen and (min-width: 600px) {
   .items {
     flex-wrap: wrap;
-    /* display: block; */
   }
 
   .item-image {
