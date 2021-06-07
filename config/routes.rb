@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :items, only: [:index, :new, :create, :show, :edit]
   resources :owner, only: [:index ]
+  
   # namespace :items do
   #   resources :import_beef, :import_pork, :import_chicken, :other, :national_beef, :national_pork, :national_chicken
   # end
