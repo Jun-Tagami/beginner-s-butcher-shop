@@ -7,11 +7,10 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :home, only: [:index]
   resources :users, only: [:show, :edit, :update, :destroy]
-
-  resources :items, only: [:index, :new, :create, :show, :edit]
-  resources :owner, only: [:index ]
-  # namespace :items do
-  #   resources :import_beef, :import_pork, :import_chicken, :other, :national_beef, :national_pork, :national_chicken
-  # end
+  resources :owner, only: [:index, :new, :create ]
+  resources :items
+  namespace :admin do
+    resources :items
+  end
 
 end

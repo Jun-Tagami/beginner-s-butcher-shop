@@ -29,13 +29,21 @@
     <li class="detail"><a href="#">information</a></li> -->
 
     <li class="detail", id = "detail">牛肉</li>
-    <li class="detail", id = "detail">豚肉</li>
-    <li class="detail", id = "detail">鶏肉</li>
+    <li class="detail2", id = "detail2">豚肉</li>
+    <li class="detail3", id = "detail3">鶏肉</li>
     <%= link_to "その他", items_path(category_id: 8), class: :detail %>
     <%= link_to "配送について", "https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/", class: :detail %>
   </ul>
   <ul class="show-lists hidden" id ="pulldown">
-    <%= link_to "輸入",  items_path(category_id: 2), class: :top_image, id:"pulldown" %>
-    <%= link_to "国産",  items_path(category_id: 5), class: :top_image, id:"pulldown" %>
+    <li><%= link_to "輸入",  items_path(category_id: 2), class: :nav_list, id:"pulldown" %></li>
+    <li><%= link_to "国産",  items_path(category_id: 5), class: :nav_list, id:"pulldown" %></li>
+  </ul>
+  <ul class="show-lists2 hidden" id ="pulldown2">
+    <li><%= link_to "輸入",  items_path(category_id: 3), class: :nav_list, id:"pulldown2" %></li>
+    <li><%= link_to "国産",  items_path(category_id: 6), class: :nav_list, id:"pulldown2" %></li>
+  </ul>
+  <ul class="show-lists3 hidden" id ="pulldown3">
+    <li><%= link_to "輸入",  items_path(category_id: 4), class: :nav_list, id:"pulldown3" %></li>
+    <li><%= link_to "国産",  items_path(category_id: 7), class: :nav_list, id:"pulldown3" %></li>
   </ul>
 </div>
