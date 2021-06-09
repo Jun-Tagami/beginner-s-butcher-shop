@@ -11,7 +11,9 @@ require("../item_price");
 require("../navigation");
 require("../navigation2");
 require("../navigation3");
-
+require("../navigation4");
+require("../navigation5");
+require("../navigation6");
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
