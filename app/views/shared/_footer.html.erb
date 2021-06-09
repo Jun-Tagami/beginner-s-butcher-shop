@@ -5,14 +5,26 @@
     <li><a href="#"><span class="insta"><i class="fab fa-instagram"></i></span></a></li>
     <li><a href="#"><i class="fab fa-line fa-4x"></i></a></li>
   </ul>
-  <ul class=footer>
+  <ul class="footer">
     <%# <li class="detail"><a href="#">company</a></li> %>
     <!-- <li class="detail"><a href="#">最新情報</a></li> -->
-    <li><%= link_to "beef", "#", class: :detail %></li>
-    <li><%= link_to "pork", "#", class: :detail %></li>
-    <li><%= link_to "chicken", "#", class: :detail %></li>
-    <li><%= link_to "others", "#", class: :detail %></li>
-    <li><%= link_to "shipping", "#", class: :detail %></li>
+    <li class="detail4", id = "detail4">牛肉</li>
+    <li class="detail5", id = "detail5">豚肉</li>
+    <li class="detail6", id = "detail6">鶏肉</li>
+    <%= link_to "その他", items_path(category_id: 8), class: :detail %>
+    <%= link_to "配送について", "https://www.kuronekoyamato.co.jp/ytc/customer/send/services/cool/", class: :detail %>
+  </ul>
+  <ul class="show-lists4 hidden2" id ="pulldown4">
+    <li><%= link_to "輸入",  items_path(category_id: 2), class: :nav_list, id:"pulldown4" %></li>
+    <li><%= link_to "国産",  items_path(category_id: 5), class: :nav_list, id:"pulldown4" %></li>
+  </ul>
+  <ul class="show-lists5 hidden2" id ="pulldown5">
+    <li><%= link_to "輸入",  items_path(category_id: 3), class: :nav_list, id:"pulldown5" %></li>
+    <li><%= link_to "国産",  items_path(category_id: 6), class: :nav_list, id:"pulldown5" %></li>
+  </ul>
+  <ul class="show-lists6 hidden2" id ="pulldown6">
+    <li><%= link_to "輸入",  items_path(category_id: 4), class: :nav_list, id:"pulldown6" %></li>
+    <li><%= link_to "国産",  items_path(category_id: 7), class: :nav_list, id:"pulldown6" %></li>
   </ul>
   <p>Copyright(C) Meet Lab Kajiyama ALL RIGHTS RESERVED.</p>
 </footer>
