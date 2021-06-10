@@ -1,8 +1,9 @@
-class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :destroy]
+class Admin::ItemsController < ApplicationController
+  # before_action :if_not_admin
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.where(category_id: params[:category_id]).order("created_at DESC")
+    @items = Item.order('created_at DESC')
   end
 
   def new
@@ -30,20 +31,29 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to item_path
+      redirect_to admin_item_path
     else
       render :edit
     end
   end
-  
+
+  def destroy
+    @item.destroy
+    redirect_to root_path
+  end
 
   private
   def item_params
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation, :category_id)
   end
 
+  # def if_not_admin
+  #   redirect_to root_path unless current_user.admin?
+  # end
+
   def set_item
     @item = Item.find(params[:id])
   end
+
 
 end

@@ -1,5 +1,9 @@
-<%= render "shared/header" %>
-
+<header>
+  <div class="heading">
+    <%= link_to image_tag("logo1.jpg", class: :title), owner_index_path %>
+    <%= link_to image_tag("logo2.jpg", class: :title2), owner_index_path %>
+  </div>
+</header>
 <%# 商品の概要 %>
 <div class="item-show">
   <div class="item-box">
@@ -43,9 +47,11 @@
           </tr>
         </tbody>
       </table>
-    <%=link_to 'もどる', :back, class:"back-btn2" %>
+    <div class="btn">
+      <%= link_to "編集", edit_admin_item_path, method: :get, class: :edit %>
+      <%= link_to "削除", admin_item_path, method: :delete, class: :destroy %>
+    </div>
+    <%=link_to 'もどる', admin_items_path, class:"back-btn2" %>
   </div>
 </div>
 <%# /商品の概要 %>
-
-<%= render "shared/footer" %>

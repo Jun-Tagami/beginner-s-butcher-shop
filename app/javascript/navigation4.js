@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
   
-  const pullDownButton = document.getElementById("detail");
-  const pullDownParents = document.getElementById("pulldown");
+  const pullDownButton = document.getElementById("detail4");
+  const pullDownParents = document.getElementById("pulldown4");
   pullDownButton.addEventListener('click', () => {
     pullDownParents.setAttribute("style", "display:block;");
   })
