@@ -1,0 +1,24 @@
+h4{
+  text-align: center;
+}
+
+.detail-owner_reserve {
+  width: 900px;
+  background-color: #eee;
+  border: 1px solid #505555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.back-btn3 {
+  line-height: 5;
+  background-color: black;
+  height: 10%;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 10px 10%;
+  text-decoration: none;
+}
+.reserve_text-center {
+  text-align: center;
+}

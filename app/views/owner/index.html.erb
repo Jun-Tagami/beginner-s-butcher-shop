@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SAMPLE SITE</title>
+    <link rel="stylesheet" href="css/boss.css">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+  </head>
+  <body style="background-image: url(images/b001.gif);">
+    <header>
+      <div class="heading">
+        <%= link_to image_tag("logo1.jpg", class: :title), root_path %>
+        <%= link_to image_tag("logo2.jpg", class: :title2), root_path %>
+      </div>
+    </header>
+    <div class="boss">
+      <div class="items">
+        <%= link_to "商品一覧", admin_items_path, class: :owner %>
+      </div>
+      <div class="users">
+        <%= link_to "owner専用", owner_members_path, class: :owner %>
+      </div>
+      <div class="reserve">
+        <%= link_to "予約一覧", owner_reserve_index_path, class: :owner %>
+      </div>
+    </div>
+  </body>
+</html>

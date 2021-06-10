@@ -1,0 +1,109 @@
+/* リセットCSS */
+body {
+  font-family: serif;
+  font-size: 14px;
+  color: black;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* container */
+.main {
+  text-align: center;
+}
+
+.main2 h1 {
+  margin: 2.5% 10% 2.5%;
+  font-size: 200%;
+}
+
+.item-lists {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item-img {
+  width: 250px;
+  height: 200px;
+ 
+}
+
+.item-info {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.list {
+  list-style: none;
+  font-size: 110%;
+  margin: 3% 3%;
+}
+
+.item-price {
+  margin-bottom: 10%;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reserve-btn-contents {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+/* i pad */
+@media screen and (min-width: 600px) {
+  .items {
+    flex-wrap: wrap;
+  }
+
+  .item-image {
+    height: 160px;
+    width: 210px;
+    margin-bottom: 20px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .footer a, .menu li, .navigation li {
+    font-size: 14px;
+  }
+
+  .nav {
+    width: 70%;
+  }
+  
+  .title {
+    width: 50px;
+  }
+
+  .title2 {
+    width: 180px;
+  }
+
+  .heading {
+    margin-top: 10px;
+  }
+
+  
+}
