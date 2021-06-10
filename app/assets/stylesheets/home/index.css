@@ -100,9 +100,9 @@ ul,li {
 }
 
 .button {
-  background-color: black;
+  background-color: rgb(71, 69, 69);
   cursor: pointer;
-  border-bottom: 5px solid rgb(71, 69, 69);
+  border-bottom: 5px solid black;
   font-family: serif;
   margin-bottom: 5%;
   display: inline-block;
@@ -153,7 +153,7 @@ ul,li {
 }
 
 /* カレンダー */
-.calender {
+.calender, .shipping-rule {
   text-align: center;
 }
 
@@ -164,7 +164,7 @@ ul,li {
   font-size: 200%;
 }
 
-.calender a {
+.calender a, .shipping-rule a {
   font-size: 120%;
 }
 
@@ -186,5 +186,9 @@ ul,li {
 table {
   margin-right: 3%;
   margin-left: 3%;
+}
+
+.shipping-rule {
+  margin-bottom: 5%;
 }
 
