@@ -7,7 +7,7 @@
     <h2 class="items-sell-title">商品の情報を入力</h2>
     <%= form_with model: @item, url: items_path, local: true do |f| %>    
 
-    <%# <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
 
     <%# 出品画像 %>
     <div class="img-upload">
@@ -78,6 +78,11 @@
       <div class="weight-bold-text">商品の詳細</div>
       <div class="form">
         <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"input-default", id:"item_category"}) %>
+        <div class="weight-bold-text">
           産地
           <span class="indispensable">必須</span>
         </div>
@@ -96,7 +101,7 @@
     </div>
     <div class="sell-btn-contents">
       <%= f.submit "出品する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%=link_to 'もどる', :back, class:"back-btn" %>
     </div>
   </div>
   <% end %>  

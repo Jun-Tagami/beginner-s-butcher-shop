@@ -1,0 +1,35 @@
+        <h4>予約一覧</h4>
+    </div>
+      <table class="detail-owner_reserve ">
+        <tbody>
+          <tr>
+            <th class="detail-owner_members ">ID</th>
+            <th class="detail-owner_members ">会社名</th>
+            <th class="detail-owner_members ">商品名</th>
+            <th class="detail-owner_members ">料金</th>
+            <th class="detail-owner_members ">配送希望日 </th>
+            <th class="detail-owner_members ">配送希望時刻 </th>
+            <th class="detail-owner_members ">登録住所</th>
+            <th class="detail-owner_members ">配送先住所 </th>
+          </tr>
+
+          <% @reserves.each do |reserve| %>   
+        <tr>   
+           <td><%= reserve.id %> </td>   
+           <td><%= reserve.user_id %> </td>    
+           <td><%= reserve.email %>  </td>   
+           <td><%= reserve.email %>  </td>   
+           <td><%= reserve.zip_code %>  </td>   
+           <td><%= reserve.prefecture.name %>   </td>   
+           <td><%= reserve.address %>  </td>   
+           <td><%= reserve.company_tel %>  </td>   
+         </tr>
+          <% end %>
+
+        </tbody>
+      </table>
+      <div class="reserve_text-center">
+        <%=link_to 'もどる', root_path, class:"back-btn3" %>
+      </div>
+  </div>
+</div>

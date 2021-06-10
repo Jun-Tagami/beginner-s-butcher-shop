@@ -33,6 +33,12 @@ ul,li {
   flex-wrap: wrap;
 }
 
+.item-img {
+  width: 250px;
+  height: 200px;
+ 
+}
+
 .item-info {
   list-style: none;
   text-decoration: none;
@@ -45,15 +51,21 @@ ul,li {
 .list {
   list-style: none;
   font-size: 110%;
-  margin: 3% 6%;
+  margin: 3% 3%;
 }
 
 .item-price {
-  margin-bottom: 20%;
+  margin-bottom: 10%;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
 }
 
 .reserve-btn-contents {
-  margin-bottom: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 
@@ -61,7 +73,6 @@ ul,li {
 @media screen and (min-width: 600px) {
   .items {
     flex-wrap: wrap;
-    /* display: block; */
   }
 
   .item-image {

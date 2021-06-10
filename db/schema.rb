@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_24_222653) do
+ActiveRecord::Schema.define(version: 2021_05_24_224654) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 2021_05_24_222653) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "zip_code", null: false
+    t.integer "preferences_id", null: false
+    t.string "address", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
+
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "amount", null: false
@@ -41,8 +51,31 @@ ActiveRecord::Schema.define(version: 2021_05_24_222653) do
     t.string "locality", null: false
     t.string "expiry_date", null: false
     t.string "preservation", null: false
+    t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "kajiyamas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "encrypted_password", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reserves", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.integer "amount_id"
+    t.integer "payment_id"
+    t.integer "hope_date"
+    t.integer "hope_time"
+    t.bigint "address_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["address_id"], name: "index_reserves_on_address_id"
+    t.index ["item_id"], name: "index_reserves_on_item_id"
+    t.index ["user_id"], name: "index_reserves_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -63,4 +96,8 @@ ActiveRecord::Schema.define(version: 2021_05_24_222653) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "addresses", "users"
+  add_foreign_key "reserves", "addresses"
+  add_foreign_key "reserves", "items"
+  add_foreign_key "reserves", "users"
 end

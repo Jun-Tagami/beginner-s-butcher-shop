@@ -63,13 +63,58 @@ header {
 .menu {
   display: flex;
   justify-content: space-around;
-  padding: 1% 0; 
+  padding: 1.5% 0; 
   list-style: none;
 }
 
-.detail {
-  text-decoration: none;
-  color: white;
+.menu li {
   font-size: 140%;
 }
 
+.detail, .detail2, .detail3 {
+  text-decoration: none;
+  color: white;
+  font-size: 140%;
+  position: relative;
+}
+
+.show-lists li, .show-lists2, .show-lists3 {
+  list-style: none;
+  border: 1px solid black;
+}
+
+.show-lists, .show-lists2, .show-lists3 {
+  display: block;
+  background-color: black;
+  opacity: 0.9;
+  width: 8%;
+  padding: 1% 1%;
+  font-size: 120%;
+}
+
+.show-lists {
+  position: absolute;
+  left: 7.5%;
+  top: 123px;
+}
+.show-lists2 {
+  position: absolute;
+  left: 25%;
+  top: 123px;
+}
+
+.show-lists3 {
+  position: absolute;
+  left: 43.5%;
+  top: 123px;
+}
+
+
+.nav_list {
+  /* text-decoration: none; */
+  color: white;
+}
+
+.hidden{
+  display: none;
+}
