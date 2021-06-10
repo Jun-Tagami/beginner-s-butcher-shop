@@ -27,6 +27,21 @@
   font-weight: bold;
 }
 
+.statment {
+  text-align: center;
+}
+
+.comment {
+  font-size: 140%;
+  color: red;
+  border: 1px solid red;
+  width: 70%;
+  white-space: nowrap;
+  padding: 2% 0;
+  margin: 2% auto;
+  display: inline-block;
+}
+
 .form-group {
   width: 50%;
   display: flex;
