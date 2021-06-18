@@ -1,4 +1,4 @@
-class reserveAmount < ActiveHash::Base
+class ReserveAmount < ActiveHash::Base
   self.data = [
     { id: 0, name: '--' },
     { id: 1, name: '1', multiple:1 },
