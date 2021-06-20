@@ -138,7 +138,8 @@ ul,li {
 .explain  {
   text-align: center;
   margin: 0 auto;
-  /* display: block; */
+  display: block;
+  width: 80%;
 }
 
 .explain .text {
@@ -168,6 +169,9 @@ ul,li {
   font-size: 120%;
   white-space: nowrap;
   display: inline-block;
+  margin: 0 auto;
+  display: block;
+
 }
 
 .calender span {
