@@ -139,7 +139,6 @@ ul,li {
   text-align: center;
   margin: 0 auto;
   display: block;
-  width: 80%;
 }
 
 .explain .text {
@@ -169,7 +168,6 @@ ul,li {
   font-size: 100%;
   white-space: nowrap;
   display: inline-block;
-  width: 80%;
   margin: 0 auto;
   display: block;
 
