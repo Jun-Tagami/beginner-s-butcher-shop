@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'items_orders/index'
+  get 'items_orders/create'
+  get 'items_order/index'
+  get 'items_order/create'
   # devise_for :users, controllers: {
   #   sessions: "users/sessions",
   #   registrations: "users/registrations"
