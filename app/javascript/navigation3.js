@@ -2,10 +2,10 @@ window.addEventListener('load', () => {
 
   const pullDownButton = document.getElementById("detail3");
   const pullDownParents = document.getElementById("pulldown3");
-  pullDownButton.addEventListener('click', () => {
+  pullDownButton.addEventListener('mouseover', () => {
     pullDownParents.setAttribute("style", "display:block;");
   })
-  pullDownButton.addEventListener('mouseover', () => {
+  pullDownButton.addEventListener('click', () => {
     pullDownParents.removeAttribute("style", "display:block;");
   })
 });
