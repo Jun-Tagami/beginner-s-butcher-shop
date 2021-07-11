@@ -3,12 +3,20 @@ h4{
 }
 
 .detail-owner_reserve {
-  width: 900px;
-  background-color: #eee;
-  border: 1px solid #505555;
-  font-size: 14px;
-  text-align: center;
+  border-collapse:collapse;
 }
+ 
+table.detail-owner_reserve th{
+  border:1px solid #000066;
+  background:royalblue;
+}
+ 
+table.detail-owner_reserve td{
+  border:1px solid #000066;
+  background:#ffffff;
+}
+
+
 
 .back-btn3 {
   line-height: 5;

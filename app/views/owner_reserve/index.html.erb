@@ -1,17 +1,28 @@
         <h4>予約一覧</h4>
     </div>
       <table class="detail-owner_reserve ">
-        <tbody>
-          <tr>
-            <th class="detail-owner_members ">ID</th>
-            <th class="detail-owner_members ">会社名</th>
-            <th class="detail-owner_members ">商品名</th>
-            <th class="detail-owner_members ">料金</th>
-            <th class="detail-owner_members ">配送希望日 </th>
-            <th class="detail-owner_members ">配送希望時刻 </th>
-            <th class="detail-owner_members ">登録住所</th>
-            <th class="detail-owner_members ">配送先住所 </th>
-          </tr>
+	<tr>
+		<td rowspan="2">ID</td>
+		<td rowspan="2">会社名</td>
+		<td rowspan="2">商品名</td>
+		<td rowspan="2">数量</td>
+		<td rowspan="2">料金</td>
+		<td rowspan="2">配送希望日</td>
+		<td rowspan="2">配送希望時刻</td>
+		<td colspan="4">登録住所</td>
+		<td colspan="4">配送先住所</td>
+	</tr>
+	<tr>
+		<td>郵便番号</td>
+		<td>都道府県</td>
+		<td>都道府県以外の住所</td>
+		<td>電話番号</td>
+		<td>郵便番号</td>
+		<td>都道府県</td>
+		<td>都道府県以外の住所</td>
+		<td>電話番号</td>
+	</tr>
+
 
           <% @reserves.each do |reserve| %>   
         <tr>   
