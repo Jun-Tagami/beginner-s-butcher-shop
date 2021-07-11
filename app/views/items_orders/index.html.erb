@@ -123,9 +123,8 @@
       </div>
     </div>
     <%# /配送先の入力 %>
-    <div class='buy-btn'>
-       <%= link_to "購入確定", items_orders_index_path(@items_id) ,class:"item-red-btn"%> 
-    </div>
+   <div class="sell-btn-contents">
+      <%= f.submit "購入する" ,class:"sell-btn" %>
      <% end %>
   </div>
 </div>
