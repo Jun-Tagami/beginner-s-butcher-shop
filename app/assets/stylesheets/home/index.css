@@ -138,7 +138,7 @@ ul,li {
 .explain  {
   text-align: center;
   margin: 0 auto;
-  /* display: block; */
+  display: block;
 }
 
 .explain .text {
@@ -148,7 +148,7 @@ ul,li {
 }
 
 .text p {
-  font-size: 120%;
+  font-size: 100%;
   white-space: nowrap;
 }
 
@@ -165,7 +165,12 @@ ul,li {
 }
 
 .calender a, .shipping-rule a {
-  font-size: 120%;
+  font-size: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0 auto;
+  display: block;
+
 }
 
 .calender span {

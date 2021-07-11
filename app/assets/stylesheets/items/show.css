@@ -39,6 +39,10 @@ ul,li {
   margin-bottom: 3%;
 }
 
+.item-box h2 {
+  font-size: 200%;
+}
+
 .item-box-img {
   width: 450px;
   height: 300px;
@@ -47,11 +51,12 @@ ul,li {
 .item-explain-box {
   font-size: 120%;
   margin-bottom: 10%;
+  text-align: center;
 }
 
 .item-explain-box h4 {
   text-align: center;
-  font-size: 160%;
+  font-size: 150%;
 }
 
 .name, .item-price2 {
