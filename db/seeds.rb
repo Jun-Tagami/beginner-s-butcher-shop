@@ -9,23 +9,23 @@
 
 
 users.create!(
-company-name:'test'
-company-tel:'000000000'
-email:'111@111'
-zip-code:'111-111'
-preferences-id:'2'
-address:'test'
+company-name:'test',
+company-tel:'000000000',
+email:'111@111',
+zip-code:'111-111',
+preferences-id:'2',
+address:'test',
 encrypted-password:'111111a'
 )
 
 
 items.create!(
-image: File.open('./app/assets/images/beef2.jpg')
-name:'test'
-amount:'2'
-price:'2'
-detail:'test'
-locality:'test'
-expiry-date:'test'
+image: File.open('./app/assets/images/beef2.jpg'),
+name:'test',
+amount:'2',
+price:'2',
+detail:'test',
+locality:'test',
+expiry-date:'test',
 preservataion:'test'
 )
