@@ -6,17 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#rails db:seedでUserとItemが登録できます。
 
-
-#User.create!(
-#company_name: 'test',
-#company_tel: '000000000',
-#email: '444@444',
-#zip_code: '111-1111',
-#prefecture_id: '2',
-#address: 'test',
-#password: '111111'
-#)
+User.create!(
+company_name: 'test',
+company_tel: '000000000',
+email: '444@444',
+zip_code: '111-1111',
+prefecture_id: '2',
+address: 'test',
+password: '111111'
+)
 
 
 Item.create!(
@@ -27,5 +27,6 @@ price:'2',
 detail:'test',
 locality:'test',
 expiry_date:'test',
-preservataion:'test'
+preservation:'test',
+category_id: '2'
 )
