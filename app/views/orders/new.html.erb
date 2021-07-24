@@ -63,8 +63,10 @@
     </div>
     <%# /支払額の表示 %>
 
-     <%= form_with model: @order_address, url:items_orders_index_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
-       <%= render 'shared/error_messages', model: @order_address %> 
+     <%= form_with model: @order, url:orders_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+       <%= render 'shared/error_messages', model: @order %> 
+
+       <%= f.hidden_field :item_id, value: params[:item_id]%> 
 
       <div class="form-group">
         <div class='form-text-wrap'>
@@ -128,5 +130,4 @@
      <% end %>
   </div>
 </div>
-
 <%# <%= render "shared/second-footer"%>

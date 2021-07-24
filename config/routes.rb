@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   # get 'item_orders/create'
   # get 'item_orders/index'
   # get 'items_orders/index'
-  # post 'item_orders/index'
   # get 'items_orders/create'
   # get 'items_order/index'
   # get 'items_order/create'
+  post 'orders/new'
 
-  resources :item_orders
+  resources :orders
 
   # devise_for :users, controllers: {
   #   sessions: "users/sessions",

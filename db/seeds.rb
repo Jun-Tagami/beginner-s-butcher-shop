@@ -20,7 +20,7 @@ password: '111111'
 
 
 Item.create!(
-#image: File.open(’./app/assets/images/beef2.jpg’),
+image: File.open(’./app/assets/images/beef2.jpg’),
 name:'test',
 amount:'2',
 price:'2',
