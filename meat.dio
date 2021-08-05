@@ -1,8 +1,6 @@
 <mxfile host="65bd71144e" pages="2">
     <diagram id="hfToS-bDIWEnh0XIH3uD" name="ページ1">
         <mxGraphModel dx="564" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-        <mxGraphModel dx="726" dy="118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -71,16 +69,10 @@
     </diagram>
     <diagram id="iRuMu5GTt8IYzdthJHjW" name="ページ2">
         <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-
             <root>
-                &#xa;                &#xa;&#xa;
                 <mxCell id="LGRJBsweqkGXAYnV-NYi-0"/>
-                &#xa;                &#xa;&#xa;
                 <mxCell id="LGRJBsweqkGXAYnV-NYi-1" parent="LGRJBsweqkGXAYnV-NYi-0"/>
-                &#xa;                &#xa;&#xa;
             </root>
-            &#xa;            &#xa;&#xa;
         </mxGraphModel>
-        &#xa;        &#xa;&#xa;
     </diagram>
 </mxfile>
