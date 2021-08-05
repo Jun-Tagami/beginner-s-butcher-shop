@@ -18,7 +18,7 @@
                   <%= item.name %>
                 </h3>
                 <div class='item-price'>
-                  <span>1kg当たり</span>
+                  <span><%= item.amount %></span>
                   <span><%= item.price %>円</span>
                 </div>
                 <div class="price-content">
@@ -40,7 +40,7 @@
                     <button>カートへ追加</button>
                   </div>
                   <div class="reserve-btn-contents">
-                    <button>カートへ進む</button>
+                    <%= link_to "購入画面に進む", items_orders_index_path(@items_id) ,class:"item-red-btn"%> 
                   </div>
                 </div>
               </div>

@@ -9,4 +9,3 @@ window.addEventListener('load', () => {
     pullDownParents.removeAttribute("style", "display:block;");
   })
 });
-

@@ -2,7 +2,8 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name             
     validates :amount            
-    validates :price, format: { with: /\A[0-9]+\z/ }            
+    # validates :price, format: { with: /\A[0-9]+\z/ } 
+    validates :price, numericality: { with: /\A[0-9]+\z/, message: 'is not included in the list' } 
     validates :detail           
     validates :locality        
     validates :expiry_date      

@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :destroy]
+
   def index
     @items = Item.where(category_id: params[:category_id]).order("created_at DESC")
   end
@@ -26,9 +28,22 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def update
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      render :edit
+    end
+  end
+  
+
   private
   def item_params
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation, :category_id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
 end
