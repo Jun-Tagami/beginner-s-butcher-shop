@@ -1,16 +1,16 @@
 class CreateOrders < ActiveRecord::Migration[6.0]
   def change
     create_table :orders do |t|
-      t.reference :name, null: false
-      t.reference :item, null: false
+      t.references  :name, null: false
+      t.references :item, null: false
       t.integer :amount, null: false
       t.integer :payment, null: false
-      t.reference :hope_date, null: false
+      t.references :hope_date, null: false
       t.integer :hope_time, null: false
-      t.string :order_name,
-      t.string :order_zip_code,
-      t.integer :order_prefecture,
-      t.reference :address,
+      t.string :order_name
+      t.string :order_zip_code
+      t.integer :order_prefecture
+      t.references :address
 
       t.timestamps
     end

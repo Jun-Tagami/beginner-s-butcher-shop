@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_04_050759) do
+ActiveRecord::Schema.define(version: 2021_07_23_040524) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -66,6 +66,25 @@ ActiveRecord::Schema.define(version: 2021_07_04_050759) do
   create_table "order_addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "name_id", null: false
+    t.bigint "item_id", null: false
+    t.integer "amount", null: false
+    t.integer "payment", null: false
+    t.bigint "hope_date_id", null: false
+    t.integer "hope_time", null: false
+    t.string "order_name"
+    t.string "order_zip_code"
+    t.integer "order_prefecture"
+    t.bigint "address_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["address_id"], name: "index_orders_on_address_id"
+    t.index ["hope_date_id"], name: "index_orders_on_hope_date_id"
+    t.index ["item_id"], name: "index_orders_on_item_id"
+    t.index ["name_id"], name: "index_orders_on_name_id"
   end
 
   create_table "reserve_times", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
