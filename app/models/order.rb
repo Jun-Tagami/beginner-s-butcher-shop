@@ -20,9 +20,9 @@ class Order < ApplicationRecord
     validates :area_id
   end
 
-  def save
+  def save2
     # ユーザーの情報を保存し、「order」という変数に入れている
-    order = Order.create(user_id: user_id, item_id: item_id)
+    orders = Order.create(user_id: user_id, item_id: item_id)
     # 住所の情報を保存
     Address.create(order_id: order.id, postal_code: postal_code, area_id: area_id, municipalities: municipalities,
                    house_number: house_number, building_name: building_name, phone_number: phone_number)
