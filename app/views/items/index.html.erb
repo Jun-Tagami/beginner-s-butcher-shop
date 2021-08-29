@@ -25,14 +25,19 @@
                   <div class="price-text">
                     <span>数量</span>
                     <span class="indispensable">必須</span>
+                 </div>
+                  <%= f.collection_select(:reserve_amount, ReserveAmount.all,:id, :name, {}, {class:"select-box", id:"prefecture"}) %> 
+                 </div>
                   </div>
                   <%# <%= form_with model: @order_address, url:items_orders_index_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
                   <%# <%= render 'shared/error_messages', model: @order_address %>  
 
-                  <%# <%= f.collection_select(:reserve_amount_id, reserveAmount.all, :id, :name, {}, {class:"input-default", id:"item-amount"}) %> %>
+                  <%# <%= f.collection_select(:reserve_amount_id, reserveAmount.all, :id, :name, {}, {class:"input-default", id:"item-amount"}) %>
                   <%# <%= f.text_field :amount, class:"amount-input", id:"item-amount", placeholder:"例）15" %>
                    <%# <% end %> 
+          
                 </div>
+
                 <%# <div class="price-content">
                   <span>合計金額</span>
                   <span>

@@ -3,7 +3,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
     create_table :orders do |t|
       t.references :user, null: false
       t.references :item, null: false
-      t.integer :amount, null: false
+      t.integer :reserve_amount, null: false
       t.integer :payment, null: false
       t.date :reserve_date, null: false
       t.integer :reserve_time, null: false
