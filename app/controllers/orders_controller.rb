@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
   def create
     #フロントから送信されたデータを受け取って、新規のorderオブジェクトを作成してインスタンス変数に代入する
       @order= Order.new(order_params)
-    binding.pry
       @item = Item.find(params[:order][:item_id])
     #オーダーオフジェクトを保存する。保存ができたらトップページにリダイレクトする。
     if @order.save

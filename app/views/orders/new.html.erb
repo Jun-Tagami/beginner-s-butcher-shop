@@ -66,14 +66,15 @@
      <%= form_with model: @order, url:orders_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
        <%= render 'shared/error_messages', model: @order %> 
 
-       <%= f.hidden_field(:item_id, value: params[:item_id])%> 
+       <%# <%= f.hidden_field(item_id: params[:item_id], value: params[:item_id])%> 
+       <%= f.hidden_field :item_id, value: @item.id%>
 
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">配送希望日</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field 'postal_code', class:"select-box", id:"prefecture", placeholder:"例）2021年○月○日", maxlength:"11" %> 
+        <%= f.text_field 'reserve_date', class:"select-box", id:"prefecture", placeholder:"例）2021年○月○日", maxlength:"11" %> 
       </div>
 
       <div class="form-group">
@@ -100,28 +101,28 @@
           <label class="form-text">氏名</label>
           <span class="indispensable">必須</span>
         </div>
-         <%= f.text_field 'municipalities', class:"input-default", id:"city", placeholder:"例）株式会社○○"%> 
+         <%= f.text_field 'order_name', class:"input-default", id:"city", placeholder:"例）株式会社○○"%> 
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">郵便番号</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field 'postal_code', class:"input-default", id:"zip-code", placeholder:"例）123-4567", maxlength:"8" %> 
+        <%= f.text_field 'order_zip_code', class:"input-default", id:"zip-code", placeholder:"例）123-4567", maxlength:"8" %> 
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">都道府県</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:prefecture_id, Prefecture.all,:id, :name, {}, {class:"select-box", id:"prefecture"}) %> 
+        <%= f.collection_select(:order_prefecture_id, Prefecture.all,:id, :name, {}, {class:"select-box", id:"prefecture"}) %> 
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">市区町村以下全て</label>
           <span class="indispensable">必須</span>
         </div>
-         <%= f.text_field 'municipalities', class:"input-default", id:"city", placeholder:"例）横浜市緑区"%> 
+         <%= f.text_field 'order_address', class:"input-default", id:"city", placeholder:"例）横浜市緑区"%> 
       </div>
       <%# <div class="form-group">
         <div class='form-text-wrap'>
