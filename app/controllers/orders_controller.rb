@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   # 復習用→ログアウト状態のユーザーは、URLを直接入力して商品購入ページに遷移しようとすると、商品の販売状況に関わらずログインページに遷移すること
   def new
     # 復習用→フォームオブジェクトのインスタンスを生成し、インスタンス変数に代入する
-     @order = Order.new(reserve_amount: order_params[:reserve_amount])
+     @order = Order.new(reserve_amount:order_params[:reserve_amount])
      @item = Item.find(params[:item_id])
   end
  
@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
 private
 
  def order_params
-   params.require(:order).permit(:user, :item, :reserve_amount, :payment, reserve_time, :order_name, :order_zip_code, order_prefecture, :order_address)
+  #  params.require(:order).permit(:user, :item, :reserve_amount, :payment, reserve_time, :order_name, :order_zip_code, order_prefecture, :order_address)
  end 
 
 # def order_params
