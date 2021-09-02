@@ -19,7 +19,7 @@ password: '111111'
 )
 
 
-Item.new(
+item = Item.new(
 name:'test',
 amount:'2',
 price:'2',
@@ -28,6 +28,6 @@ locality:'test',
 expiry_date:'test',
 preservation:'test',
 category_id: '2',
-item.image.attach(io: File.open(Rails.root.join("app/assets/images/beef2.jpg")), filename: "beef2.jpg")
-Item.save!
 )
+item.image.attach(io: File.open(Rails.root.join("app/assets/images/beef2.jpg")), filename: "beef2.jpg")
+item.save!
