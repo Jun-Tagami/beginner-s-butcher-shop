@@ -27,7 +27,7 @@ detail:'test',
 locality:'test',
 expiry_date:'test',
 preservation:'test',
-category_id: '2'
-)
+category_id: '2',
 item.image.attach(io: File.open(Rails.root.join("app/assets/images/beef2.jpg")), filename: "beef2.jpg")
 Item.save!
+)
