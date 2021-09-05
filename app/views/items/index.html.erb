@@ -7,7 +7,7 @@
         <ul class="item-lists">
           <% @items.each do |item| %>
             <li class='list'>
-            <%= form_with model: @item, url: items_path, class: 'item-main', local: true do |f| %>
+            <%= form_with model: @item, url: new_order_path, class: 'item-main', local: true do |f| %>
               <%= link_to item_path(item.id), method: :get do %>
                 <div class='item-img-content'>
                   <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" if item.image.attached? %>
