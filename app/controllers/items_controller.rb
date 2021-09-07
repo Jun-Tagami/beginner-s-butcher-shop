@@ -2,12 +2,12 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :destroy]
 
   def index
-    @items = Item.where(category_id: params[:category_id]).order("created_at DESC")
+    @items = Item.where(category_id: params[:category_id]).order('created_at DESC')
   end
 
   def new
-    @items = Item.includes(:user).limit(10).order("created_at DESC")
-    @items = Item.where(category_id: params[:category_id]).order("created_at DESC")
+    @items = Item.includes(:user).limit(10).order('created_at DESC')
+    @items = Item.where(category_id: params[:category_id]).order('created_at DESC')
     @item = Item.new
   end
 
@@ -35,9 +35,9 @@ class ItemsController < ApplicationController
       render :edit
     end
   end
-  
 
   private
+
   def item_params
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation, :category_id)
   end
@@ -45,5 +45,4 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
-
 end

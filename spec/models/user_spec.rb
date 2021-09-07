@@ -99,9 +99,9 @@ RSpec.describe User, type: :model do
       end
 
       it 'company_telが11桁以内でないと登録できない' do
-        @user.company_tel = 111111111111
+        @user.company_tel = 111_111_111_111
         @user.valid?
-        expect(@user.errors.full_messages).to include "Company tel is invalid"
+        expect(@user.errors.full_messages).to include 'Company tel is invalid'
       end
 
       it 'zip_codeが空だと登録できない' do
@@ -117,7 +117,7 @@ RSpec.describe User, type: :model do
       end
 
       it 'prefecture_idが空だと登録できない' do
-        @user.prefecture_id = ""
+        @user.prefecture_id = ''
         @user.valid?
         expect(@user.errors.full_messages).to include "Prefecture can't be blank"
       end
@@ -125,7 +125,7 @@ RSpec.describe User, type: :model do
       it 'prefecture_idが1以外じゃないと登録できない' do
         @user.prefecture_id = 1
         @user.valid?
-        expect(@user.errors.full_messages).to include "Prefecture must be other than 1"
+        expect(@user.errors.full_messages).to include 'Prefecture must be other than 1'
       end
     end
   end
