@@ -138,7 +138,9 @@
     </div>
     <%# /配送先の入力 %>
    <div class="sell-btn-contents">
-      <%= f.submit "購入する" ,class:"sell-btn" %>
+     <%= f.hidden_field :reserve_amount, value: @order.reserve_amount %>
+     <%= f.hidden_field :payment, value: @item.price %>
+     <%= f.submit "購入する" ,class:"sell-btn" %>
      <% end %>
   </div>
 </div>

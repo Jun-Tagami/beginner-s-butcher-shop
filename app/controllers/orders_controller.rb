@@ -24,7 +24,17 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:user, :item_id, :reserve_amount, :payment, :reserve_time, :order_name, :order_zip_code, :order_prefecture, :order_address)
+    params.require(:order).permit(
+      :user, :item_id,
+      :reserve_amount,
+      :reserve_time,
+      :reserve_date,
+      :order_name,
+      :order_zip_code,
+      :order_prefecture,
+      :order_address,
+      :payment,
+    )
   end
 
   # def order_params
