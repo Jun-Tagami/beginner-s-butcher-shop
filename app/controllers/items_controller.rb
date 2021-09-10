@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :destroy]
 
   def index
+    @order = Order.new
     @items = Item.where(category_id: params[:category_id]).order('created_at DESC')
   end
 
