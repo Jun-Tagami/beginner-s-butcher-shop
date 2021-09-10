@@ -21,7 +21,7 @@ password: '111111'
 
 item = Item.new(
 name:'test',
-amount:'2',
+amount:'2kg当り',
 price:'2',
 detail:'test',
 locality:'test',

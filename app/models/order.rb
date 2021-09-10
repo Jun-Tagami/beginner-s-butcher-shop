@@ -1,7 +1,7 @@
 class Order < ApplicationRecord
   with_options presence: true do
     validates :order_zip_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
-    validates :amount
+    validates :reserve_amount
     validates :payment
     validates :reserve_date
     validates :reserve_date
@@ -9,7 +9,7 @@ class Order < ApplicationRecord
   end
 
   with_options numericality: { other_than: 0 } do
-    validates :amount
+    validates :reserve_amount
     # validates :payment
     validates :reserve_time
   end
