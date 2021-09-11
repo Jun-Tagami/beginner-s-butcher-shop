@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
       :order_zip_code,
       :order_prefecture,
       :order_address,
-      :payment,
+      :payment
     )
   end
 
