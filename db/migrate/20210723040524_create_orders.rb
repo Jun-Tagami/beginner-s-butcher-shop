@@ -5,11 +5,11 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.references :item, null: false
       t.integer :reserve_amount, null: false
       t.integer :payment, null: false
-      t.date :reserve_date, null: false
-      t.integer :reserve_time, null: false
+      t.date :reserve_date_id, null: false
+      t.integer :reserve_time_id, null: false
       t.string :order_name
       t.string :order_zip_code
-      t.integer :order_prefecture
+      t.integer :order_prefecture_id
       t.string :order_address
 
       t.timestamps

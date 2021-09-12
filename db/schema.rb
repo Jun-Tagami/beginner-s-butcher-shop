@@ -73,11 +73,11 @@ ActiveRecord::Schema.define(version: 2021_07_23_040524) do
     t.bigint "item_id", null: false
     t.integer "reserve_amount", null: false
     t.integer "payment", null: false
-    t.date "reserve_date", null: false
-    t.integer "reserve_time", null: false
+    t.date "reserve_date_id", null: false
+    t.integer "reserve_time_id", null: false
     t.string "order_name"
     t.string "order_zip_code"
-    t.integer "order_prefecture"
+    t.integer "order_prefecture_id"
     t.string "order_address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

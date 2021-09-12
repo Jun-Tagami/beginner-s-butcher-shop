@@ -4,7 +4,6 @@ class Order < ApplicationRecord
     validates :reserve_amount
     validates :payment
     validates :reserve_date
-    validates :reserve_date
     validates :reserve_time
   end
 
