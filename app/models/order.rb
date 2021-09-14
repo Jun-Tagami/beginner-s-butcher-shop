@@ -7,13 +7,13 @@ class Order < ApplicationRecord
     validates :reserve_amount
     validates :payment
     validates :reserve_date
-    validates :reserve_time
+    validates :reserve_time_id
   end
 
   with_options numericality: { other_than: 0 } do
     validates :reserve_amount
     # validates :payment
-    validates :reserve_time
+    validates :reserve_time_id
   end
 
   def save2
