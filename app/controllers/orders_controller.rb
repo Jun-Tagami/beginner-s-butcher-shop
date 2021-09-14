@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 
   def create
     # フロントから送信されたデータを受け取って、新規のorderオブジェクトを作成してインスタンス変数に代入する
-    @order = Order.new(order_params)
+    @order = current_user.orders.build(order_params)
     @item = Item.find(params[:order][:item_id])
     # オーダーオフジェクトを保存する。保存ができたらトップページにリダイレクトする。
     if @order.save
@@ -27,11 +27,11 @@ class OrdersController < ApplicationController
     params.require(:order).permit(
       :user, :item_id,
       :reserve_amount,
-      :reserve_time,
       :reserve_date,
+      :reserve_time_id,
       :order_name,
       :order_zip_code,
-      :order_prefecture,
+      :prefecture_id,
       :order_address,
       :payment
     )
