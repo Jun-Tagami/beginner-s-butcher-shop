@@ -12,7 +12,7 @@ class Item < ApplicationRecord
   end
 
   has_one_attached :image
-   extend ActiveHash::Associations::ActiveRecordExtensions
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
 
   def self.category(category_id)

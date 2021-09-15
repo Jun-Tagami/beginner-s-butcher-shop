@@ -6,7 +6,7 @@
 		<td rowspan="2">会社名</td>
 		<td rowspan="2">商品名</td>
 		<td rowspan="2">数量</td>
-		<td rowspan="2">料金</td>
+		<td rowspan="2">支払い金額</td>
 		<td rowspan="2">配送希望日</td>
 		<td rowspan="2">配送希望時刻</td>
 		<td colspan="4">登録住所</td>
@@ -23,17 +23,16 @@
 		<td>電話番号</td>
 	</tr>
 
-
-          <% @reserves.each do |reserve| %>   
+          <% @orders.each do |order| %>   
         <tr>   
-           <td><%= reserve.id %> </td>   
-           <td><%= reserve.user_id %> </td>    
-           <td><%= reserve.email %>  </td>   
-           <td><%= reserve.email %>  </td>   
-           <td><%= reserve.zip_code %>  </td>   
-           <td><%= reserve.prefecture.name %>   </td>   
-           <td><%= reserve.address %>  </td>   
-           <td><%= reserve.company_tel %>  </td>   
+           <td><%= order.id %> </td>   
+           <td><%= order.user_id %> </td>    
+           <td><%= order.item_id %>  </td>    
+           <td><%= order.reserve_amount %>  </td>    
+           <%# <td><<%= @item.price*@order.reserve_amount %> </td>     %>
+           <%# <td><%= reserve.prefecture.name %>   </td>    
+           <%# <td><%= reserve.address %>  </td>    
+           <%# <td><%= reserve.company_tel %>  </td>    
          </tr>
           <% end %>
 
