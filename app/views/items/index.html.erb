@@ -1,5 +1,4 @@
 <%= render "shared/header" %>
-<%= form_with model: @item, url: items_path, class: 'item-main', local: true do |f| %>
 <div class="main">
   <div class="main2">
     <div class="beef">
@@ -8,43 +7,34 @@
         <ul class="item-lists">
           <% @items.each do |item| %>
             <li class='list'>
-              <%= link_to item_path(item.id), method: :get do %>
-                <div class='item-img-content'>
-                  <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" if item.image.attached? %>
-                </div>
-              <% end %>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  <%= item.name %>
-                </h3>
-                <div class='item-price'>
-                  <span><%= item.amount %></span>
-                  <span><%= item.price %>円</span>
-                </div>
-                <div class="price-content">
-                  <div class="price-text">
-                    <span>数量</span>
-                    <span class="indispensable">必須</span>
+              <%= form_with model: @order, url: new_order_path, class: 'item-main', local: true do |f| %>
+                <%= link_to item_path(item.id), method: :get do %>
+                  <div class='item-img-content'>
+                    <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" if item.image.attached? %>
                   </div>
-                  <%# <%= f.collection_select(:reserveAmount_id, reserveAmount.all, :id, :name, {}, {class:"input-default", id:"item-amount"}) %>
-                  <%# <%= f.text_field :amount, class:"amount-input", id:"item-amount", placeholder:"例）15" %>
-                </div>
-                <%# <div class="price-content">
-                  <span>合計金額</span>
-                  <span>
-                    <span id='sum-price'></span>
-                  </span>
-                </div> %>
-                <div class="btn">
-                  <div class="reserve-btn-contents">
-                    <button>カートへ追加</button>
+                <% end %>
+                <div class='item-info'>
+                  <h3 class='item-name'>
+                    <%= item.name %>
+                  </h3>
+                  <div class='item-price'>
+                    <span><%= item.amount %></span>
+                    <span><%= item.price %>円</span>
+                  </div>
+                  <div class="price-content">
+                    <div class="price-text">
+                      <span>数量</span>
+                      <span class="indispensable">必須</span>
+                    </div>
+                    <%= f.collection_select(:reserve_amount, ReserveAmount.all,:id, :name, {}, {class:"select-box", id:"prefecture"}) %> 
                   </div>
                   <div class="reserve-btn-contents">
-                    <%= link_to "購入画面に進む", items_orders_index_path(@items_id) ,class:"item-red-btn"%> 
+                    <%= f.hidden_field :item_id, value: item.id %> 
+                    <%= f.submit '購入画面に進む'%> 
+                    <%# <%= link_to "購入画面に進む", new_order_path(item_id: item.id) ,class:"item-red-btn"%>  
                   </div>
                 </div>
-              </div>
-              <%# <% // ログインしていないときは上記を表示するようにしましょう %>
+              <% end  %>
             </li>
           <% end  %>
         </ul>
@@ -52,6 +42,5 @@
     </div>
   </div>
 </div>
-<% end %>
 <%= render "shared/footer" %>
 

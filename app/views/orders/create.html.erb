@@ -1,3 +1,6 @@
+<h1>ItemOrders#create</h1>
+<p>Find me in app/views/item_orders/create.html.erb</p>
+##########################################以下index.htmlのコピー
 <%# <%= render "shared/second-header"%> 
 
 <div class='transaction-contents'>
@@ -8,14 +11,13 @@
     <%# 購入内容の表示 %>
           <div class='item-contents'>
         <ul class="item-lists">
-          <% @items.each do |item| %>
+          <%# <% @items.each do |item| %> 
             <li class='list'>
-              <%= link_to item_path(item.id), method: :get do %>
+              <%# <%= link_to item_path(item.id), method: :get do %> 
                 <div class='item-img-content'>
                   <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" if item.image.attached? %>
                 </div>
               <% end %>
-                 <% end %>
               <div class='item-info'>
                 <h3 class='item-name'>
                   <%= item.name %>
@@ -109,4 +111,5 @@
     </div>
   </div>
 </div>
+
 <%# <%= render "shared/second-footer"%>

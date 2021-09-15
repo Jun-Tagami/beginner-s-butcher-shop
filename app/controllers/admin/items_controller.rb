@@ -7,8 +7,8 @@ class Admin::ItemsController < ApplicationController
   end
 
   def new
-    @items = Item.includes(:user).limit(10).order("created_at DESC")
-    @items = Item.where(category_id: params[:category_id]).order("created_at DESC")
+    @items = Item.includes(:user).limit(10).order('created_at DESC')
+    @items = Item.where(category_id: params[:category_id]).order('created_at DESC')
     @item = Item.new
   end
 
@@ -43,6 +43,7 @@ class Admin::ItemsController < ApplicationController
   end
 
   private
+
   def item_params
     params.require(:item).permit(:image, :name, :price, :amount, :detail, :locality, :expiry_date, :preservation, :category_id)
   end
@@ -54,6 +55,4 @@ class Admin::ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
-
-
 end
