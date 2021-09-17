@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2021_07_23_040524) do
     t.date "reserve_date", null: false
     t.integer "reserve_time_id", null: false
     t.string "order_name"
+    t.string "phone_number"
     t.string "order_zip_code"
     t.integer "prefecture_id"
     t.string "order_address"

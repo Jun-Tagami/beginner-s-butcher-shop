@@ -30,6 +30,7 @@ class OrdersController < ApplicationController
       :reserve_date,
       :reserve_time_id,
       :order_name,
+      :phone_number,
       :order_zip_code,
       :prefecture_id,
       :order_address,

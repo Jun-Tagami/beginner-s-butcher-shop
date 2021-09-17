@@ -8,6 +8,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.date :reserve_date, null: false
       t.integer :reserve_time_id, null: false
       t.string :order_name
+      t.string :phone_number
       t.string :order_zip_code
       t.integer :prefecture_id
       t.string :order_address
@@ -28,6 +29,7 @@ end
 # | hope_date        | reference  | null: false                    |
 # | hope_time        | integer    | null: false                    |
 # | order_name       | string     |                                |
+# | phone_number     |string      |null: false                     |
 # | order_zip_code   | string     |                                |
 # | order_prefecture | integer    |                                |
 # | address          | reference  |                                |
