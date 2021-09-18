@@ -38,7 +38,7 @@
            <td><%= order.order_name %>  </td>   <!–配送先住所＿氏名––>
            <td><%= order.phone_number%> </td>  <!–配送先住所＿電話番号––> 
            <td><%= order.order_zip_code %>   </td>  <!–配送先住所＿郵便番号––>
-           <td><%= order.prefecture_id %>  </td>    <!–配送先住所＿都道府県––>
+           <td><%= order.prefecture.name %> </td>   <!–配送先住所＿都道府県––>
            <td><%= order.order_address %>  </td>   <!–配送先住所＿都道府県以外の住所––>
          </tr>
           <% end %>
