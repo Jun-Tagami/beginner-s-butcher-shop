@@ -7,7 +7,7 @@ class Category < ActiveHash::Base
     { id: 5, name: '国産牛肉' },
     { id: 6, name: '国産豚肉' },
     { id: 7, name: '国産鶏肉' },
-    { id: 8, name: 'その他' },
+    { id: 8, name: 'その他' }
   ]
 
   include ActiveHash::Associations

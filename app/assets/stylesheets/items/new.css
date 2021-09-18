@@ -179,16 +179,19 @@
 .sell-btn-contents {
   width: 100%;
   text-align: center;
+  margin: 0 auto;
 }
 
 .sell-btn {
-  background: #ea352d;
+  margin-top: 50px;
+  background: #ea352d ;
   border: 1px solid #ea352d;
   color: #fff;
-  width: 100%;
+  width: 20%;
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
+  
 }
 
 .back-btn {
