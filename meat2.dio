@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="2">
     <diagram id="hfToS-bDIWEnh0XIH3uD" name="ページ1">
-        <mxGraphModel dx="579" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="548" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,7 +19,7 @@
                 <mxCell id="CzR_rL5oW1h_GJkthz_w-19" value="orders" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
                     <mxGeometry x="30" y="270" width="240" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="CzR_rL5oW1h_GJkthz_w-20" value="user (references型）&#10;item (references型)&#10;amount_id(integer型, NOT NULL)&#10;payment_id (integer型, NOT NULL)&#10;hope_date(references型)&#10;hope_time_id(integer型)&#10;order_name(string型)&#10;order_zip_code(string型,NOT NULL)&#10;order_prefecture(integer型)&#10;address(reference型)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="CzR_rL5oW1h_GJkthz_w-19" vertex="1">
+                <mxCell id="CzR_rL5oW1h_GJkthz_w-20" value="user (references型）&#10;item (references型)&#10;amount_id(integer型, NOT NULL)&#10;payment_id (integer型, NOT NULL)&#10;hope_date(references型)&#10;hope_time_id(integer型)&#10;order_name(string型)&#10;phone_number(string型)&#10;order_prefecture(integer型)&#10;address(reference型)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="CzR_rL5oW1h_GJkthz_w-19" vertex="1">
                     <mxGeometry y="26" width="240" height="154" as="geometry"/>
                 </mxCell>
                 <mxCell id="CzR_rL5oW1h_GJkthz_w-28" value="" style="fontSize=12;html=1;endArrow=ERone;endFill=1;startArrow=ERoneToMany;startFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="CzR_rL5oW1h_GJkthz_w-19" target="10" edge="1">
