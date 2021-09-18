@@ -31,9 +31,9 @@
            <td><%= order.reserve_amount %>  </td>     <!–数量––>
            <td><%= order.item.price * order.reserve_amount %>   </td> <!–支払い金額––>  
            <td><%= order.reserve_date %>  </td>   <!–配達希望日––>
-           <td><%= order.reserve_time_id %>  </td>   <!–配達希望時刻––>
+           <td><%= order.reserve_time.name %>  </td>   <!–配達希望時刻––>
            <td><%= order.user.zip_code %>  </td>   <!–登録住所＿郵便番号––>
-           <td><%= order.user.prefecture_id %>  </td>   <!–登録住所＿都道府県––>
+           <td><%= order.user.prefecture.name %>  </td>   <!–登録住所＿都道府県––>
            <td><%= order.user.address %>  </td>   <!–登録住所＿都道府県の以外の住所––>
            <td><%= order.order_name %>  </td>   <!–配送先住所＿氏名––>
            <td><%= order.phone_number%> </td>  <!–配送先住所＿電話番号––> 
