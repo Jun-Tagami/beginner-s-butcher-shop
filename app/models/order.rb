@@ -3,8 +3,8 @@ class Order < ApplicationRecord
   belongs_to :item
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :prefecture, foreign_key:'prefecture_id'
-  belongs_to :reserve_time, foreign_key:'reserve_time_id'
+  belongs_to :prefecture, foreign_key: 'prefecture_id'
+  belongs_to :reserve_time, foreign_key: 'reserve_time_id'
 
   with_options presence: true do
     validates :order_zip_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
