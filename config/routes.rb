@@ -15,15 +15,16 @@ Rails.application.routes.draw do
   #   sessions: "users/sessions",
   #   registrations: "users/registrations"
   # }
-  devise_for :users, controllers: {
-    sessions:      'users/sessions',
-    passwords:     'users/passwords',
-    registrations: 'users/registrations'
-  }
+  devise_for :users
+  #  controllers: {
+  #  sessions:      'users/sessions',
+  #   passwords:     'users/passwords',
+  #   registrations: 'users/registrations'
+  # }
   devise_for :owners, controllers: {
-    sessions:      'admins/sessions',
-    passwords:     'admins/passwords',
-    registrations: 'admins/registrations'
+    sessions:      'owners/sessions',
+    passwords:     'owners/passwords',
+    registrations: 'owners/registrations'
   }
 
   root to: 'home#index'
