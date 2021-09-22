@@ -3,7 +3,7 @@ class OwnerReserveController < ApplicationController
   before_action :authenticate_owner!, only: [:index]
 
   def index
-    if user_signed_in? == owner_signed_in?
+    if user_signed_in? && owner_signed_in?
       @user = User.all
       @reserves = Reserve.all
       @order = Order.all

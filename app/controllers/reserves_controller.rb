@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   before_action :ordersopen, only: [:index, :create]
 
   def index
-    if user_signed_in? == owner_signed_in?
+    if user_signed_in? && owner_signed_in?
       @order_address = OrderAddress.new
     else
      render :home_index_path
