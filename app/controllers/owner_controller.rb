@@ -6,6 +6,6 @@ class OwnerController < ApplicationController
    if user_signed_in? == owner_signed_in?
    else
     render :home_index_path
+   end
   end
-end
 end
