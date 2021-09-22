@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # get 'item_orders/index'
   # get 'item_orders/create'
   # get 'item_orders/index'
@@ -15,6 +16,17 @@ Rails.application.routes.draw do
   #   registrations: "users/registrations"
   # }
   devise_for :users
+  #  controllers: {
+  #  sessions:      'users/sessions',
+  #   passwords:     'users/passwords',
+  #   registrations: 'users/registrations'
+  # }
+  devise_for :owners, controllers: {
+    sessions:      'owners/sessions',
+    passwords:     'owners/passwords',
+    registrations: 'owners/registrations'
+  }
+
   root to: 'home#index'
   resources :home, only: [:index]
   resources :users, only: [:show, :edit, :update, :destroy]
