@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class Owners::SessionsController < Devise::SessionsController
-
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     owner_index_path
   end
 
