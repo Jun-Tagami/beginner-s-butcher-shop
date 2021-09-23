@@ -1,14 +1,9 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :create]
   before_action :authenticate_owner!, only: [:index, :create]
   before_action :ordersopen, only: [:index, :create]
 
   def index
-    if user_signed_in? && owner_signed_in?
       @order_address = OrderAddress.new
-    else
-     render :home_index_path
-    end
   end
 
   def create
