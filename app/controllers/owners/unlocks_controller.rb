@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 class Owners::UnlocksController < Devise::UnlocksController
-
-  def after_inactive_sign_out_path_for(resource)
-    owner_index_path
-  end 
-
   # GET /resource/unlock/new
   # def new
   #   super
