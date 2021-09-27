@@ -18,6 +18,11 @@ class User < ApplicationRecord
     validates :prefecture_id, numericality: { other_than: 1 }
   end
 
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  validates_format_of :password, with: PASSWORD_REGEX 
+
+  VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
 
   # def update_without_current_password(params, *options)
   #   params.delete(:current_password)
