@@ -15,6 +15,7 @@
     <%# // ログインしているときは上記を表示するようにしましょう %>
     <%# ログインしていないときは以下を表示するようにしましょう %>
       <div class="navigation">
+        <%= link_to "owner専用", owner_session_path, class: :owner %>
         <%= link_to "ログイン", new_user_session_path, class: :details %>
         <%= link_to "新規登録", new_user_registration_path, class: :details %>
         <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>

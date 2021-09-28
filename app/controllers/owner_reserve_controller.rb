@@ -1,10 +1,9 @@
 class OwnerReserveController < ApplicationController
-  def index
-    @user = User.all
-    @reserves = Reserve.all
-    @order = Order.all
+  before_action :authenticate_owner!, only: [:index]
 
-    # @order = current_user.orders.build(order_params)
-    # @item = Item.find(params[:order][:item_id])
-  end
+  def index
+      @user = User.all
+      @reserves = Reserve.all
+      @order = Order.all
+end
 end
