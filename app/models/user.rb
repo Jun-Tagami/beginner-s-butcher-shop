@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :orders
+  has_many :orders 
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture

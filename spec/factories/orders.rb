@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :order do
-    user_id     { 2 }
-    item_id   { 2 }
+    user_id     { 1 }
+    item_id   { 1 }
     reserve_amount    { 2 }
     payment   { '2' }
     reserve_date  { '2021-10-10' }
@@ -10,7 +10,7 @@ FactoryBot.define do
     phone_number  { 0701234567 }
     order_zip_code  { '111-1111' }
     prefecture_id  { 2 }
-    order_address  { 2 }
+    order_address  { 'test' }
   end
 end
 
