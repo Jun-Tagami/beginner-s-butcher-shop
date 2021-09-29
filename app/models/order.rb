@@ -15,7 +15,7 @@ class Order < ApplicationRecord
   end
 
   # 配送先が登録している住所と異なる場合は入力
-  validates :order_zip_code, presence: true, if: user.zip_code == order_zip_code
+  validates :order_zip_code, presence: true, if:  user.zip_code == order_zip_code
 
   # 入力があった場合はフォーマットチェック
   validates :order_zip_code, allow_blank: true,
