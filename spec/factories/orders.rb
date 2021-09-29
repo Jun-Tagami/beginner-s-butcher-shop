@@ -11,6 +11,8 @@ FactoryBot.define do
     order_zip_code  { '111-1111' }
     prefecture_id  { 2 }
     order_address  { 'test' }
+    association :user
+    association :item
   end
 end
 
