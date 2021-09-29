@@ -26,15 +26,13 @@ RSpec.describe Order, type: :model do
         @order.order_zip_code = ''
         expect(@order).to be_valid
       end
-    # end
-    # context '新規登録できないとき' do
-    #   it '配送先の情報として、郵便番号が必須であること' do
-    #     @order_address.postal_code = ''
-    #     @order_address.valid?
-    #     expect(@order_address.errors.full_messages).to include("Postal code can't be blank")
-    #   end
-
-
+      # end
+      # context '新規登録できないとき' do
+      #   it '配送先の情報として、郵便番号が必須であること' do
+      #     @order_address.postal_code = ''
+      #     @order_address.valid?
+      #     expect(@order_address.errors.full_messages).to include("Postal code can't be blank")
+      #   end
     end
   end
 end

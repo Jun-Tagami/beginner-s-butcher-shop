@@ -5,9 +5,9 @@ class Owners::SessionsController < Devise::SessionsController
     owner_index_path
   end
 
-  def after_sign_out_path_for(resource)
+  def after_sign_out_path_for(_resource)
     owner_index_path
-  end 
+  end
 
   # before_action :configure_sign_in_params, only: [:create]
 

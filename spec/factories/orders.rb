@@ -1,21 +1,20 @@
 FactoryBot.define do
   factory :order do
     user_id     { 1 }
-    item_id   { 1 }
-    reserve_amount    { 2 }
-    payment   { '2' }
-    reserve_date  { '2021-10-10' }
+    item_id { 1 }
+    reserve_amount { 2 }
+    payment { '2' }
+    reserve_date { '2021-10-10' }
     reserve_time_id { 2 }
     order_name { 'test' }
-    phone_number  { 0701234567 }
-    order_zip_code  { '111-1111' }
+    phone_number { 0o701234567 }
+    order_zip_code { '111-1111' }
     prefecture_id  { 2 }
     order_address  { 'test' }
     association :user
     association :item
   end
 end
-
 
 # t.references :user, null: false
 # t.references :item, null: false
