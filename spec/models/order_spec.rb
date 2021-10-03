@@ -26,14 +26,31 @@ RSpec.describe Order, type: :model do
         @order.order_zip_code = ''
         expect(@order).to be_valid
       end
-
-      # end
-      # context '新規登録できないとき' do
-      #   it '配送先の情報として、郵便番号が必須であること' do
-      #     @order_address.postal_code = ''
-      #     @order_address.valid?
-      #     expect(@order_address.errors.full_messages).to include("Postal code can't be blank")
-      #   end
+      it '配送先の情報として、都道府県入力が空欄でも登録できること' do
+        @order.prefecture_id = ''
+        expect(@order).to be_valid
+      end
+      it '配送先の情報として、市区町村以下全ての入力が空欄でも登録できること' do
+        @order.order_address = ''
+        expect(@order).to be_valid
+      end
+      context '購入ができないとき' do
+        it '配送先希望日が必須であること' do
+          @order.reserve_date = ''
+          @order.valid?
+          expect(@order.errors.full_messages).to include("Reserve date can't be blank")
+        end
+        it '配送希望時刻が必須であること' do
+          @order.reserve_time_id = 0
+          @order.valid?
+          expect(@order.errors.full_messages).to include("Reserve time must be other than 0")
+        end
+        it '数量入力が必須であること' do
+          @order.reserve_amount = 0
+          @order.valid?
+          expect(@order.reserve_amount).to include("Reserve amount must be other than 0")
+        end
+      end
     end
   end
 end
