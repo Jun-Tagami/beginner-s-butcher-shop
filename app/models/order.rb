@@ -15,9 +15,14 @@ class Order < ApplicationRecord
   end
 
   # 配送先が登録している住所と異なる場合は入力
+  validates :order_name, presence: true, if: -> { user.company_name == order_name }
+  validates :phone_number, presence: true, if: -> { user.company_tel == phone_number }
   validates :order_zip_code, presence: true, if: -> { user.zip_code == order_zip_code }
+  validates :order_address, presence: true, if: -> { user.address == order_address }
 
   # 入力があった場合はフォーマットチェック
+  validates :phone_number, allow_blank: true,
+                           format: { with: /\A\d{,11}\z/ }
   validates :order_zip_code, allow_blank: true,
                              format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
 

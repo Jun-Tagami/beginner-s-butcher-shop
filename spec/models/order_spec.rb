@@ -26,6 +26,7 @@ RSpec.describe Order, type: :model do
         @order.order_zip_code = ''
         expect(@order).to be_valid
       end
+
       # end
       # context '新規登録できないとき' do
       #   it '配送先の情報として、郵便番号が必須であること' do
