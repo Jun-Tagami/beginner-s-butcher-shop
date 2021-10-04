@@ -48,7 +48,7 @@ RSpec.describe Order, type: :model do
         it '数量入力が必須であること' do
           @order.reserve_amount = 0
           @order.valid?
-          expect(@order.reserve_amount).to include("Reserve amount must be other than 0")
+          expect(@order.errors.full_messages).to include("Reserve amount must be other than 0")
         end
       end
     end
