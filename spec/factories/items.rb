@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryBot.define do
   factory :item do
     name     { '居酒屋 池袋' }
@@ -8,6 +10,6 @@ FactoryBot.define do
     expiry_date { '2日間' }
     preservation { '冷蔵10°以下' }
     category_id  { 2 }
-    image {File.open("#{Rails.root}/public/images/test_image.png")}
+    image { fixture_file_upload(File.open("#{Rails.root}/public/images/test_image.png")) }
   end
 end
