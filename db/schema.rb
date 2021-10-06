@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2021_09_18_235358) do
     t.string "order_zip_code"
     t.integer "prefecture_id"
     t.string "order_address"
+    t.text "memo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["item_id"], name: "index_orders_on_item_id"

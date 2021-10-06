@@ -12,7 +12,8 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :order_zip_code
       t.integer :prefecture_id
       t.string :order_address
-
+      t.text :memo
+      
       t.timestamps
     end
   end
