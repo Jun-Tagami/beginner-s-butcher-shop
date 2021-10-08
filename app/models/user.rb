@@ -1,9 +1,6 @@
 class User < ApplicationRecord
   has_many :orders
 
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :prefecture
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -18,7 +15,6 @@ class User < ApplicationRecord
     validates :prefecture_id, numericality: { other_than: 1 }
   end
 
-
   # def update_without_current_password(params, *options)
   #   params.delete(:current_password)
 
@@ -32,5 +28,6 @@ class User < ApplicationRecord
   #   result
   # end
 
-
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :prefecture
 end
