@@ -11,7 +11,6 @@
 		<td rowspan="2">配送希望時刻</td>
 		<td colspan="4">登録住所</td>
 		<td colspan="5">配送先住所</td>
-    <td rowspan="2">備考</td>
 	</tr>
 	<tr>
     <td>電話番号</td>
@@ -25,8 +24,7 @@
 		<td>都道府県以外の住所</td>
 	</tr>
 
-          <% @order.each do |order| %>  
-          <%# <%= form_with model: @user, url: user_path, method: :patch, class: 'registration-main', local: true do |f| %> %>
+          <% @order.each do |order| %>   
         <tr>   
            <td><%= order.id %> </td> <!–商品ID––>
            <td><%= order.user.company_name %>  </td>    <!–会社名––>
@@ -44,8 +42,6 @@
            <td><%= order.order_zip_code %>   </td>  <!–配送先住所＿郵便番号––>
            <td><%= order.prefecture.name %> </td>   <!–配送先住所＿都道府県––>
            <td><%= order.order_address %>  </td>   <!–配送先住所＿都道府県以外の住所––>
-           <td><%= text_field :address, class:"input-default", id:"address", placeholder:"例)test form"%> </td>   <!備考欄––>
-           <%# <td> <%= f.submit "保存する" ,class:"register-red-btn" %> </td>   <!保存するボタン––> %>
          </tr>
           <% end %>
 
