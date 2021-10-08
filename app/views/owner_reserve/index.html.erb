@@ -9,11 +9,10 @@
 		<td rowspan="2">支払い金額</td>
 		<td rowspan="2">配送希望日</td>
 		<td rowspan="2">配送希望時刻</td>
-		<td colspan="4">登録住所</td>
+		<td colspan="3">登録住所</td>
 		<td colspan="5">配送先住所</td>
 	</tr>
 	<tr>
-    <td>電話番号</td>
 		<td>郵便番号</td>
 		<td>都道府県</td>
 		<td>都道府県以外の住所</td>
@@ -33,7 +32,6 @@
            <td><%= order.item.price * order.reserve_amount %>   </td> <!–支払い金額––>  
            <td><%= order.reserve_date %>  </td>   <!–配達希望日––>
            <td><%= order.reserve_time.name %>  </td>   <!–配達希望時刻––>
-           <td><%= order.user.company_tel %>  </td>   <!–登録住所＿電話番号––>
            <td><%= order.user.zip_code %>  </td>   <!–登録住所＿郵便番号––>
            <td><%= order.user.prefecture.name %>  </td>   <!–登録住所＿都道府県––>
            <td><%= order.user.address %>  </td>   <!–登録住所＿都道府県の以外の住所––>
