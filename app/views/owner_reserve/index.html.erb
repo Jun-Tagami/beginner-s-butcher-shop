@@ -25,7 +25,6 @@
 	</tr>
 
           <% @order.each do |order| %>  
-          <%# <%= form_with model: @user, url: user_path, method: :patch, class: 'registration-main', local: true do |f| %> %>
         <tr>   
            <td><%= order.id %> </td> <!–商品ID––>
            <td><%= order.user.company_name %>  </td>    <!–会社名––>
@@ -43,7 +42,7 @@
            <td><%= order.prefecture.name %> </td>   <!–配送先住所＿都道府県––>
            <td><%= order.order_address %>  </td>   <!–配送先住所＿都道府県以外の住所––>
            <td><%= text_field :address, class:"input-default", id:"address", placeholder:"例)test form"%> </td>   <!備考欄––>
-           <%# <td> <%= f.submit "保存する" ,class:"register-red-btn" %> </td>   <!保存するボタン––> %>
+           <td> <%= link_to "編集", "/edit_owner_reserve_path /#{order.id}", class: :order_name %></td>   <!編集ボタン––> %>
          </tr>
           <% end %>
 
