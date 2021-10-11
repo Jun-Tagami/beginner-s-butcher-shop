@@ -1,4 +1,5 @@
 class OwnerReserveController < ApplicationController
+
   def index
     @user = User.all
     @reserves = Reserve.all
@@ -6,6 +7,7 @@ class OwnerReserveController < ApplicationController
 
     # @order = current_user.orders.build(order_params)
     # @item = Item.find(params[:order][:item_id])
+
   end
 
   def edit
@@ -15,12 +17,17 @@ class OwnerReserveController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-    if 
-      order = Order.find(params[:id])
-      @order.update(order_params)
+    if @order.update(order_params)
       redirect_to owner_reserve_index_path
     else
       render :edit
     end
   end
+
+  private
+
+  def order_params
+    params.require(:order).permit(:user, :item, :reserve_amount, :payment, :reserve_date, :reserve_time_id, :order_name, :phone_number, :order_zip_code, :prefecture_id, :order_address, :memo)
+  end
+
 end

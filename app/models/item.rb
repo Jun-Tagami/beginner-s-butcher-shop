@@ -9,6 +9,7 @@ class Item < ApplicationRecord
     validates :expiry_date
     validates :preservation
     validates :category_id, numericality: { other_than: 1 }
+    validates :image
   end
 
   has_one_attached :image
