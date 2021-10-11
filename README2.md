@@ -47,7 +47,7 @@
 | hope_date        | reference  | null: false                    |
 | hope_time        | integer    | null: false                    |
 | order_name       | string     |                                |
-|phone_number      |string      |null: false                     |
+| phone_number     | string     | null: false                    |
 | order_zip_code   | string     |                                |
 | order_prefecture | integer    |                                |
 | address          | reference  |                                |

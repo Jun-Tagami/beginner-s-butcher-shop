@@ -73,6 +73,11 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include 'Category must be other than 1'
       end
+        it '商品画像を1枚つけることが必須であること' do
+          @item.image = nil
+          @item.valid?
+          expect(@item.errors.full_messages).to include("Image can't be blank")
+      end
     end
   end
 end
