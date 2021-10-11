@@ -9,20 +9,16 @@
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">備考欄</label>
-      <span class="indispensable">必須</span>
     </div>
     <%= f.text_field :memo, class:"input-default", id:"memo", placeholder:"例）問い合わせ中/送付完了 等"%>
   </div>
   <div class="form-group">
     <h2 class='form-bottom-text'>
-      「会員登録」のボタンを押すことにより、
-      <span>利用規約</span>
-      <br>に同意したものとみなします
+
     </h2>
   </div>
   <div class='register-btn'>
     <%= f.submit "変更する" ,class:"register-red-btn" %>
   </div>
-  <p class='register-info'>本人情報の登録について</p>
 </div>
 <% end %>

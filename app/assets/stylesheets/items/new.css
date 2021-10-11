@@ -126,9 +126,13 @@
 .select-box {
   margin: 2vh 0;
   width: 150px;
+}
+
+.select-box2 {
+  margin: 2vh 0;
+  width: 150px;
   text-align: center;
   font-size: 16px;
-  
 }
 
 /* /商品の詳細など */
