@@ -16,7 +16,7 @@ class OwnerReserveController < ApplicationController
   def update
     @order = Order.find(params[:id])
     if @order.update(order_params)
-      redirect_to owner_reserve_indexbun_path
+      redirect_to owner_reserve_index_path
     else
       render :edit
     end
