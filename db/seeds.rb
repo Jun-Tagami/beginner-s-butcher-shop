@@ -18,6 +18,10 @@ address: 'test',
 password: '111111'
 )
 
+Owner.create!(
+  email: '222@222',
+  password: '111111'
+  )
 
 item = Item.new(
 name:'test',

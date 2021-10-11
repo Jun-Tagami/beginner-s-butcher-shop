@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+
+  before_action :authenticate_user!, only: [:new, :create]
   # 復習用→ログアウト状態のユーザーは、URLを直接入力して商品購入ページに遷移しようとすると、商品の販売状況に関わらずログインページに遷移すること
   def new
     # 復習用→フォームオブジェクトのインスタンスを生成し、インスタンス変数に代入する
