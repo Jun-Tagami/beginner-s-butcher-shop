@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_many :orders
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -14,6 +13,12 @@ class User < ApplicationRecord
     validates :zip_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
     validates :prefecture_id, numericality: { other_than: 1 }
   end
+  
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
+  validates_format_of :password, with: PASSWORD_REGEX
+
+  VALID_PASSWORD_REGEX = /\A[a-z0-9]+\z/i
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
 
   # def update_without_current_password(params, *options)
   #   params.delete(:current_password)
@@ -30,4 +35,5 @@ class User < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
+
 end

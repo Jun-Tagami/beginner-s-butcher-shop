@@ -63,6 +63,8 @@
     </div>
     <%# /支払額の表示 %>
 
+
+    
      <%= form_with model: @order_address, url:item_orders_index_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
        <%= render 'shared/error_messages', model: @order_address %> 
 
@@ -98,7 +100,7 @@
           <label class="form-text">郵便番号</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field 'postal_code', class:"input-default", id:"zip-code", placeholder:"例）123-4567", maxlength:"8" %> 
+        <%= f.text_field 'postal_code', class:"input-default2", id:"zip-code", placeholder:"例）123-4567", maxlength:"8" %> 
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
@@ -112,14 +114,14 @@
           <label class="form-text">市区町村以下全て</label>
           <span class="indispensable">必須</span>
         </div>
-         <%= f.text_field 'municipalities', class:"input-default", id:"city", placeholder:"例）横浜市緑区"%> 
+         <%= f.text_field 'municipalities', class:"input-default2", id:"city", placeholder:"例）横浜市緑区"%> 
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">電話番号</label>
           <span class="indispensable">必須</span>
         </div>
-         <%= f.text_field 'phone_number', class:"input-default", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%> 
+         <%= f.text_field 'phone_number', class:"input-default2", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%> 
       </div>
     </div>
     <%# /配送先の入力 %>
