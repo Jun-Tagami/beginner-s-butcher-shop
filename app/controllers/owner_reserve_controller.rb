@@ -1,5 +1,4 @@
 class OwnerReserveController < ApplicationController
-
   def index
     @user = User.all
     @reserves = Reserve.all
@@ -26,7 +25,7 @@ class OwnerReserveController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:user, :item, :reserve_amount, :payment, :reserve_date, :reserve_time_id, :order_name, :phone_number, :order_zip_code, :prefecture_id, :order_address, :memo)
+    params.require(:order).permit(:user, :item, :reserve_amount, :payment, :reserve_date, :reserve_time_id, :order_name,
+                                  :phone_number, :order_zip_code, :prefecture_id, :order_address, :memo)
   end
-
 end
