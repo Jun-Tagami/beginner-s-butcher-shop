@@ -43,12 +43,12 @@ RSpec.describe Order, type: :model do
         it '配送希望時刻が必須であること' do
           @order.reserve_time_id = 0
           @order.valid?
-          expect(@order.errors.full_messages).to include("Reserve time must be other than 0")
+          expect(@order.errors.full_messages).to include('Reserve time must be other than 0')
         end
         it '数量入力が必須であること' do
           @order.reserve_amount = 0
           @order.valid?
-          expect(@order.errors.full_messages).to include("Reserve amount must be other than 0")
+          expect(@order.errors.full_messages).to include('Reserve amount must be other than 0')
         end
       end
     end

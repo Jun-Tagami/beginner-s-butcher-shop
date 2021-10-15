@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 
   resources :owner, only: [:index ]
    resources :owner_members, only: [:index ]
-   resources :owner_reserve, only: [:index ]
+   resources :owner_reserve, only: [:index, :edit, :update]
   # namespace :items do
   #   resources :import_beef, :import_pork, :import_chicken, :other, :national_beef, :national_pork, :national_chicken
   # end

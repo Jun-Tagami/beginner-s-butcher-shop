@@ -6,10 +6,9 @@
   <div class="nav">
     <% if user_signed_in? %>
       <div class="navigation">
-        <%= link_to "owner専用", owner_session_path, class: :owner %>
         <%= link_to current_user.company_name, "/users/#{current_user.id}", class: :user_name %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-        <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        <%# <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a> %>
       </div>
     <% else %>
     <%# // ログインしているときは上記を表示するようにしましょう %>
@@ -17,7 +16,7 @@
       <div class="navigation">
         <%= link_to "ログイン", new_user_session_path, class: :details %>
         <%= link_to "新規登録", new_user_registration_path, class: :details %>
-        <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        <%# <a href="reserve.html"><i class="fas fa-shopping-cart fa-2x"></i></a> %>
       </div>
     <% end %>
     <%# // ログインしていないときは上記を表示するようにしましょう %>
