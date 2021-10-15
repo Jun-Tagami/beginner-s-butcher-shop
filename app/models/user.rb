@@ -13,7 +13,7 @@ class User < ApplicationRecord
     validates :zip_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
     validates :prefecture_id, numericality: { other_than: 1 }
   end
-  
+
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX
 
@@ -35,5 +35,4 @@ class User < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
-
 end
