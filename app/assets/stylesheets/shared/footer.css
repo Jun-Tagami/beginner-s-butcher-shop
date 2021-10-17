@@ -1,0 +1,125 @@
+/* フッター */
+footer {
+  background-color: black;
+  text-align: center;
+}
+
+.footer {
+  margin: 2.5% 0;
+  padding-top: 1.5% 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.footer a {
+  font-size: 140%;
+}
+
+.detail4, .detail5, .detail6 {
+  text-decoration: none;
+  color: white;
+  font-size: 140%;
+  position: relative;
+}
+
+.show-lists4 li, .show-lists5, .show-lists6 {
+  list-style: none;
+  border: 1px solid black;
+}
+
+.show-lists4, .show-lists5, .show-lists6 {
+  display: block;
+  background-color: black;
+  opacity: 0.9;
+  width: 8%;
+  padding: 1% 1%;
+  font-size: 120%;
+}
+
+.show-lists4 {
+  position: absolute;
+  left: 11%;
+  top: 4830px;
+}
+.show-lists5 {
+  position: absolute;
+  left: 30%;
+  top: 4830px;
+}
+
+.show-lists6 {
+  position: absolute;
+  left: 48.5%;
+  top: 4830px;
+}
+
+.hidden2 {
+  display: none;
+}
+
+footer p {
+  color: white;
+  font-size: 100%;
+}
+
+.sns_icon {
+  display: flex;
+  justify-content: space-around; 
+}
+
+.sns_icon li {
+  margin-top: 2%;
+  list-style: none;
+}
+
+.fa-facebook-square {
+  color: #315096;
+  background-color: white;
+  height: 95%;
+}
+
+.fa-twitter-square {
+  color: #55acee;
+  background-color: white;
+  height: 95%;
+}
+
+
+.insta {/*アイコンの背景*/
+  position: relative;/*相対配置*/
+  display: inline-block;
+  width: 140%;/*幅*/
+  height: 100%;/*高さ*/
+  vertical-align: middle;/*垂直中央に*/
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+  overflow: hidden;/*はみ出た部分を隠す*/
+  border-radius: 8px;/*角丸に*/
+}
+
+.insta:before {/*グラデーションを重ねるため*/
+  content: '';
+  position: absolute;/*絶対配置*/
+  top: 24px;/*ずらす*/
+  left: -18px;/*ずらす*/
+  width: 70px;/*グラデーションカバーの幅*/
+  height: 70px;/*グラデーションカバーの高さ*/
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+}
+
+.fa-instagram {/*アイコン*/
+  color: #FFF;/*白に*/
+  position: relative;/*z-indexを使うため*/
+  z-index: 2;/*グラデーションより前に*/
+  font-size: 45px;/*アイコンサイズ*/
+  top: 6px;/*上下にずらす*/
+  left: 0.5px;/*左右にずらす*/
+}
+
+.fa-line {
+  color: #00c300;
+  background-color: white;
+  height: 95%;
+}

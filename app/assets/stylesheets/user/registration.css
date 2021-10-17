@@ -27,6 +27,21 @@
   font-weight: bold;
 }
 
+.statment {
+  text-align: center;
+}
+
+.comment {
+  font-size: 140%;
+  color: red;
+  border: 1px solid red;
+  width: 70%;
+  white-space: nowrap;
+  padding: 2% 0;
+  margin: 2% auto;
+  display: inline-block;
+}
+
 .form-group {
   width: 50%;
   display: flex;
@@ -52,6 +67,7 @@
 .input-default {
   width: 100%;
   margin-top: 5px;
+  margin-bottom: 20px;
   height: 48px;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -135,6 +151,7 @@
 .form-bottom-text>span {
   color: #0099e8;
   cursor: pointer;
+
 }
 
 .register-btn {

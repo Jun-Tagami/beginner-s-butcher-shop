@@ -1,0 +1,33 @@
+h2{
+  text-align: center;
+}
+
+.detail-owner_reserve {
+  border-collapse:collapse;
+  margin: 0 auto 10px;
+}
+ 
+table.detail-owner_reserve th{
+  border:1px solid #000066;
+  background:royalblue;
+}
+ 
+table.detail-owner_reserve td{
+  border:1px solid #000066;
+  background:#ffffff;
+}
+
+
+
+.back-btn3 {
+  line-height: 5;
+  background-color: black;
+  height: 10%;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 10px 10%;
+  text-decoration: none;
+}
+.reserve_text-center {
+  text-align: center;
+}

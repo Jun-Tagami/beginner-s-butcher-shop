@@ -1,0 +1,99 @@
+/* リセットCSS */
+body {
+  font-family: serif;
+  font-size: 14px;
+  color: black;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+/* 商品の概要 */
+
+.item-show {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.item-box {
+  background-color: #FFF;
+  padding: 5vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-box h1 {
+  font-size: 250%;
+  margin-bottom: 3%;
+}
+
+.item-box h2 {
+  font-size: 200%;
+}
+
+.item-box-img {
+  width: 450px;
+  height: 300px;
+}
+
+.item-explain-box {
+  font-size: 120%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.item-explain-box h4 {
+  text-align: center;
+  font-size: 150%;
+}
+
+.name, .item-price2 {
+  font-size: 200%;
+}
+
+.detail-table2 {
+  margin-bottom: 5%;
+}
+
+.detail-item2 {
+  width: 100px;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value2 {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+/* .option {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+} */
+
+.back-btn2 {
+  background-color: black;
+  height: 10%;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 10%;
+  text-decoration: none;
+}
+

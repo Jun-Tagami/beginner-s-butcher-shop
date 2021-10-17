@@ -1,0 +1,24 @@
+<%= form_with model: @order, url: owner_reserve_path(@order), method: :patch, class: 'registration-main', local: true do |f| %>
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h2 class='form-header-text'>
+      備考欄編集
+    </h2>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">備考欄</label>
+    </div>
+    <%= f.text_field :memo, class:"input-default", id:"memo", placeholder:"例）問い合わせ中/送付完了 等"%>
+  </div>
+  <div class="form-group">
+    <h2 class='form-bottom-text'>
+
+    </h2>
+  </div>
+  <div class='register-btn'>
+    <%= f.submit "変更する" ,class:"register-red-btn" %>
+  </div>
+</div>
+<% end %>

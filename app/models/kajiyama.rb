@@ -1,0 +1,2 @@
+class Kajiyama < ApplicationRecord
+end
