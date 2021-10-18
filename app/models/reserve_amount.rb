@@ -1,6 +1,6 @@
 class ReserveAmount < ActiveHash::Base
   self.data = [
-    { id: 0, name: '--' },
+    { id: 0, name: '------' },
     { id: 1, name: '1', multiple: 1 },
     { id: 2, name: '2', multiple: 2 },
     { id: 3, name: '3', multiple: 3 },
@@ -10,8 +10,7 @@ class ReserveAmount < ActiveHash::Base
     { id: 7, name: '7', multiple: 7 },
     { id: 8, name: '8', multiple: 8 },
     { id: 9, name: '9', multiple: 9 },
-    { id: 10, name: '10', multiple: 10 },
-    { id: 11, name: 'お問い合わせください' }
+    { id: 10, name: '10', multiple: 10 }
   ]
 
   include ActiveHash::Associations
