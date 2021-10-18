@@ -11,6 +11,7 @@
 		<td rowspan="2">配送希望時刻</td>
 		<td colspan="3">登録住所</td>
 		<td colspan="5">配送先住所</td>
+    <td rowspan="2">備考</td>
 	</tr>
 	<tr>
 		<td>郵便番号</td>
@@ -23,23 +24,25 @@
 		<td>都道府県以外の住所</td>
 	</tr>
 
-          <% @order.each do |order| %>   
+          <% @order.each do |order| %>  
         <tr>   
            <td><%= order.id %> </td> <!–商品ID––>
            <td><%= order.user.company_name %>  </td>    <!–会社名––>
            <td><%= order.item.name %>  </td>     <!–商品名––>
            <td><%= order.reserve_amount %>  </td>     <!–数量––>
-           <td><%= order.item.price * order.reserve_amount %>   </td> <!–支払い金額––>  
+           <td><%= order.item.price * order.reserve_amount %>   </td> <!–支払い金額––>
            <td><%= order.reserve_date %>  </td>   <!–配達希望日––>
            <td><%= order.reserve_time.name %>  </td>   <!–配達希望時刻––>
            <td><%= order.user.zip_code %>  </td>   <!–登録住所＿郵便番号––>
            <td><%= order.user.prefecture.name %>  </td>   <!–登録住所＿都道府県––>
            <td><%= order.user.address %>  </td>   <!–登録住所＿都道府県の以外の住所––>
            <td><%= order.order_name %>  </td>   <!–配送先住所＿氏名––>
-           <td><%= order.phone_number%> </td>  <!–配送先住所＿電話番号––> 
+           <td><%= order.phone_number%> </td>  <!–配送先住所＿電話番号––>
            <td><%= order.order_zip_code %>   </td>  <!–配送先住所＿郵便番号––>
            <td><%= order.prefecture.name %> </td>   <!–配送先住所＿都道府県––>
            <td><%= order.order_address %>  </td>   <!–配送先住所＿都道府県以外の住所––>
+           <td><%= order.memo %>  </td>    <!備考欄––>
+           <td> <%= link_to "編集", edit_owner_reserve_path(order), class: :order_name %></td> <!編集ボタン––> 
          </tr>
           <% end %>
 
