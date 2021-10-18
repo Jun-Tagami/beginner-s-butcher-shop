@@ -52,3 +52,4 @@ production:
   database: meat_kajiyama_production
   username: meat_kajiyama
   password: <%= ENV['MEAT_KAJIYAMA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
