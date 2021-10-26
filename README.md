@@ -55,20 +55,6 @@
 - belongs_to :address
 
 
-# addresses テーブル
-
-| Column            | Type       | Options                        |
-| ----------------- | ---------- | -------------------------------|
-| zip_code          | string     | null: false                    |
-| preferences_id    | integer    | null: false                    |
-| address           | string     | null: false                    |
-| user              | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- has_one :reserve
-
 ## owner テーブル
 
 | Column                | Type      | Options                        |
@@ -76,9 +62,7 @@
 | name                  | string    | null: false                    |
 | encrypted_password    | string    | null: false                    |
 
-### Association
 
-- has_many :items
 
 
 
