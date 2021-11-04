@@ -14,7 +14,6 @@
 
 
 ### Association
-
 - has_many :addresses
 - has_many :reserves
  
@@ -32,21 +31,25 @@
 | preservation     | string    | null: false                    |
 
 ### Association
-
 - has_one :reserve
 - belongs_to :owner
 
-## reserves テーブル
 
-| Column        | Type       | Options                        |
-| ------------- | -----------| ------------------------------ |
-| user          | references | null: false, foreign_key: true |
-| item          | references | null: false, foreign_key: true |
-| amount_id     | integer    | null: false                    |
-| payment_id    | integer    | null: false                    |
-| hope_date     | integer    |                                |
-| hope_time     | integer    |                                |
-| address       | references | null: false, foreign_key: true |
+## orders テーブル
+
+| Column           | Type       | Options                        |
+| ---------------- | -----------| ------------------------------ |
+| user             | references | null: false, foreign_key: true |
+| item             | references | null: false, foreign_key: true |
+| amount           | integer    | null: false                    |
+| payment          | integer    | null: false                    |
+| hope_date        | reference  | null: false                    |
+| hope_time        | integer    | null: false                    |
+| order_name       | string     |                                |
+| phone_number     | string     | null: false                    |
+| order_zip_code   | string     |                                |
+| order_prefecture | integer    |                                |
+| address          | reference  |                                |
 
 ### Association
 
@@ -55,20 +58,6 @@
 - belongs_to :address
 
 
-# addresses テーブル
-
-| Column            | Type       | Options                        |
-| ----------------- | ---------- | -------------------------------|
-| zip_code          | string     | null: false                    |
-| preferences_id    | integer    | null: false                    |
-| address           | string     | null: false                    |
-| user              | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- has_one :reserve
-
 ## owner テーブル
 
 | Column                | Type      | Options                        |
@@ -76,9 +65,7 @@
 | name                  | string    | null: false                    |
 | encrypted_password    | string    | null: false                    |
 
-### Association
 
-- has_many :items
 
 
 
