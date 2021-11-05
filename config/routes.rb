@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'orders/new'
 
   devise_for :users
+
   devise_for :owners, controllers: {
     sessions:      'owners/sessions',
     passwords:     'owners/passwords',
