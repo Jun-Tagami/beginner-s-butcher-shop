@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   namespace :owners do
     resources :members, only: [:index ]
     resources :reserve, only: [:index, :edit, :update]
-    resources :owner, only: [:index]
+    get 'dashboard', to: 'dashboard#show'
   end
 
   namespace :admin do
