@@ -1,4 +1,4 @@
-class ReserveController < ApplicationController
+class Owners::ReserveController < ApplicationController
   before_action :authenticate_owner!, only: [:index]
   def index
     @user = User.all

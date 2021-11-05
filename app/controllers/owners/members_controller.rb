@@ -1,4 +1,4 @@
-class OwnerMembersController < ApplicationController
+class Owners::OwnerMembersController < ApplicationController
 
   def index
     @users = User.all
