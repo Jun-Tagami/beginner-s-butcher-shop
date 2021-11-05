@@ -14,13 +14,15 @@ Rails.application.routes.draw do
   resources :orders
   resources :home, only: [:index]
   resources :users, only: [:show, :edit, :update, :destroy]
-  resources :owner, only: [:index ]
-   resources :owner_members, only: [:index ]
-   resources :owner_reserve, only: [:index, :edit, :update]
-  resources :owner, only: [:index, :new, :create ]
   resources :items
   resources :items do
     resources :orders, only: [:index, :create]
+  end
+
+  namespace :owners do
+    resources :members, only: [:index ]
+    resources :reserve, only: [:index, :edit, :update]
+    resources :owner, only: [:index]
   end
 
   namespace :admin do
