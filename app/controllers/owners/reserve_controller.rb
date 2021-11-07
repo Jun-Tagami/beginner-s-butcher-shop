@@ -1,4 +1,4 @@
-class ReserveController < ApplicationController
+class Owners::ReserveController < ApplicationController
   before_action :authenticate_owner!, only: [:index]
   def index
     @user = User.all
@@ -14,7 +14,7 @@ class ReserveController < ApplicationController
   def update
     @order = Order.find(params[:id])
     if @order.update(order_params)
-      redirect_to owner_reserve_index_path
+      redirect_to owners_reserve_index_path
     else
       render :edit
     end
