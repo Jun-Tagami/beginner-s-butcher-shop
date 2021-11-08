@@ -1,7 +1,6 @@
 <header>
   <div class="heading">
-    <%= link_to image_tag("logo1.jpg", class: :title), owner_index_path %>
-    <%= link_to image_tag("logo2.jpg", class: :title2), owner_index_path %>
+    <%= link_to image_tag("logo2.jpg", class: :title2), owners_dashboard_path %>
   </div>
 </header>
 <%= form_with model: @item, url: items_path, class: 'item-main', local: true do |f| %>
