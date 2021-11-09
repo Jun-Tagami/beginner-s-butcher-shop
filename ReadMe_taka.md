@@ -2,24 +2,23 @@
 **模擬的な精肉点店のECサイトです**
 
 <br />
-**Beginner's Campではその手間を省き**、初心者向けにオススメのキャンプ場等を紹介しています。<br />
-（ゲストログインできます。）
-
-
-![Beginner's Camp top](https://user-images.githubusercontent.com/79072615/123040710-24bf4b80-d42f-11eb-9719-e5d74f7a1b10.png)
+牛肉、豚肉、馬肉（そのほかの肉）にジャンルを分けてさらにそれぞれのに食肉について輸入、国産肉とカテゴリーに分けました。<br />
 
 ## URL
-https://beginners-camp.net/
+利用者画面:
+https://tag-portfolio-production.herokuapp.com
+
+オーナー管理画面:
+https://tag-portfolio-production.herokuapp.com/owners/dashboard
 
 ## 使用技術
  ## フロントエンド
   - HTML / CSS
-  - JavaScript / jQuery
-  - Bootstrap 4.5
-  - Vue.js 2.6.14
+  - JavaScript
+
  ## バックエンド
-  - Ruby 2.6.3
-  - Ruby on Rails 5.2.6（フレームワーク）
+  - ruby 2.6.5
+  - Ruby on Rails 6.0.3.7（フレームワーク）
   - Rubocop（コード解析ツール）
   - Rspec（テスト）
  ## インフラ
