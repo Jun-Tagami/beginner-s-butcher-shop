@@ -27,7 +27,7 @@
           <% @order.each do |order| %>  
         <tr>   
            <td><%= order.id %> </td> <!–商品ID––>
-           <td><%= order.user.company_name %>  </td>    <!–会社名––>
+           <td><%= order.user .company_name %>  </td>    <!–会社名––>
            <td><%= order.item.name %>  </td>     <!–商品名––>
            <td><%= order.reserve_amount %>  </td>     <!–数量––>
            <td><%= order.item.price * order.reserve_amount %>   </td> <!–支払い金額––>
