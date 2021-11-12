@@ -52,4 +52,4 @@ production:
   database: tag-portfolio_production
   username: tag-portfolio
   password: <%= ENV['TAG_PORTFOLIO_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
