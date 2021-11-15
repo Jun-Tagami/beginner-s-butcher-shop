@@ -15,7 +15,7 @@ email: '444@444',
 zip_code: '111-1111',
 prefecture_id: '2',
 address: 'test',
-password: '111111'
+password: '111111a'
 )
 
 Owner.create!(
