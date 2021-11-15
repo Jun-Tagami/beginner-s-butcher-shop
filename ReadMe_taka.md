@@ -22,12 +22,11 @@ https://tag-portfolio-production.herokuapp.com/owners/dashboard
   - Rubocop（コード解析ツール）
   - Rspec（テスト）
  ## インフラ
-  - MySQL 5.7.22 / Puma / Nginx
-  - GitHub Actions(CI/CD)
-  - AWS(VPC、ACM、Route53、IAM、ALB、RDS、S3、CloudFront、EC2、ECS(Fargate))
+  - MySQL 5.7.22 / Puma 
+  - GitHub
+  - AWS(S3)
  ## 開発環境
   - VScode
-  - Docker/docker-compose
 
 ## 設計書
 
@@ -142,11 +141,7 @@ https://docs.google.com/spreadsheets/d/1OdpAQK21FwGG-HCSthLstctx_0l4XZ8ub2DcF6HW
     - GitHub Actionsを使った自動デプロイ
     - 予約機能（重複予約、過去日付の予約不可、予約時間の制限、利用日数に応じて料金の計算）
 
-## Qiitaで外部発信もしています。
-https://qiita.com/tkht2401
-
 ## 使用素材
 【画像素材】<br />
 https://o-dan.net/ja/<br />
-https://www.pakutaso.com/<br />
-https://morguefile.com/photos/morguefile/1/camp/pop
+https://www.photo-ac.com/<br />
