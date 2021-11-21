@@ -30,9 +30,6 @@ https://tag-portfolio-production.herokuapp.com/owners/dashboard
 
 ## 設計書
 
-## ER図
-<img width="1168" alt="スクリーンショット 2021-11-17 16 31 41" src="https://user-images.githubusercontent.com/76899874/142155875-ef1abc05-f6dc-469e-ae14-9dd99ecbd7a5.png">
-
 ## インフラ構成図
 ![PF_最新インフラ構成図](https://user-images.githubusercontent.com/79072615/131221620-c709739c-9476-4acc-b545-7cb52dd90524.png)
 
