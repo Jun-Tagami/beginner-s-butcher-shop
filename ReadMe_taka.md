@@ -107,12 +107,6 @@ https://docs.google.com/spreadsheets/d/1OdpAQK21FwGG-HCSthLstctx_0l4XZ8ub2DcF6HW
   - 口コミ機能
     - 口コミ機能投稿、一覧、詳細（raty.js）
     - TOP画面のみ、ユーザーが評価した平均点を表示
-  - 検索機能
-    - キャンプ場一覧から、キャンプ場の名前検索可能
-  - ブックマーク機能
-    - 気になったキャンプ場を保存できる (非同期通信 / Vue.js axios)
-  - Google Maps
-    - Google Maps API
 （管理者が投稿した住所をgeocoderで緯度経度を読み取り、地図を表示）
   ### キャンプ用品に関する機能
   - 口コミ機能
