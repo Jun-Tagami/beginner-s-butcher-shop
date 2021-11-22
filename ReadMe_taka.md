@@ -121,15 +121,6 @@ https://docs.google.com/spreadsheets/d/1OdpAQK21FwGG-HCSthLstctx_0l4XZ8ub2DcF6HW
     - 複数画像アップロード（refile）
   - キャンプ用品投稿
     - キャンプ用品投稿一覧、詳細、編集、削除
-  - その他機能
-    - ページング機能
-    - BgSwitcher（画面スライダー）
-    - レスポンシブ対応（PC、スマホ）
-    - 多言語化（flash、エラーメッセージをi18nにより日本語化）
-  - その他工夫した点
-    - bulletでN+1問題を検出
-    - WBSで作業工程の管理
-    - GitHub Actionsを使った自動デプロイ
     - 予約機能（重複予約、過去日付の予約不可、予約時間の制限、利用日数に応じて料金の計算）
 
 ## 使用素材
