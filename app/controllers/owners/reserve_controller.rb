@@ -4,7 +4,6 @@ class Owners::ReserveController < ApplicationController
     @user = User.all
     @reserves = Reserve.all
     @order = Order.all
-
   end
 
   def edit
