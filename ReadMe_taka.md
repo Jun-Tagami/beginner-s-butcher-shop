@@ -30,9 +30,6 @@ https://tag-portfolio-production.herokuapp.com/owners/dashboard
 
 ## 設計書
 
-## ER図
-![PF_最新_ER図](https://user-images.githubusercontent.com/79072615/134756537-cb18cc8f-ae09-4863-9b0a-be9b50233e2c.png)
-
 ## インフラ構成図
 ![PF_最新インフラ構成図](https://user-images.githubusercontent.com/79072615/131221620-c709739c-9476-4acc-b545-7cb52dd90524.png)
 
@@ -110,12 +107,6 @@ https://docs.google.com/spreadsheets/d/1OdpAQK21FwGG-HCSthLstctx_0l4XZ8ub2DcF6HW
   - 口コミ機能
     - 口コミ機能投稿、一覧、詳細（raty.js）
     - TOP画面のみ、ユーザーが評価した平均点を表示
-  - 検索機能
-    - キャンプ場一覧から、キャンプ場の名前検索可能
-  - ブックマーク機能
-    - 気になったキャンプ場を保存できる (非同期通信 / Vue.js axios)
-  - Google Maps
-    - Google Maps API
 （管理者が投稿した住所をgeocoderで緯度経度を読み取り、地図を表示）
   ### キャンプ用品に関する機能
   - 口コミ機能
@@ -130,15 +121,6 @@ https://docs.google.com/spreadsheets/d/1OdpAQK21FwGG-HCSthLstctx_0l4XZ8ub2DcF6HW
     - 複数画像アップロード（refile）
   - キャンプ用品投稿
     - キャンプ用品投稿一覧、詳細、編集、削除
-  - その他機能
-    - ページング機能
-    - BgSwitcher（画面スライダー）
-    - レスポンシブ対応（PC、スマホ）
-    - 多言語化（flash、エラーメッセージをi18nにより日本語化）
-  - その他工夫した点
-    - bulletでN+1問題を検出
-    - WBSで作業工程の管理
-    - GitHub Actionsを使った自動デプロイ
     - 予約機能（重複予約、過去日付の予約不可、予約時間の制限、利用日数に応じて料金の計算）
 
 ## 使用素材
