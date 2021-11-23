@@ -1,5 +1,6 @@
 class Owners::ReserveController < ApplicationController
-  before_action :authenticate_owner!, only: [:index]
+  before_action :authenticate_owner!, only: [:index, :edit, :update]
+  
   def index
     @user = User.all
     @reserves = Reserve.all
