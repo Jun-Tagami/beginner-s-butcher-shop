@@ -1,4 +1,4 @@
-# Tag-portfolio
+# Beginner's butcher shop
 **模擬的な精肉点店のECサイトです**
 
 <br />
@@ -24,14 +24,15 @@ https://tag-portfolio-production.herokuapp.com/owners/dashboard
  ## インフラ
   - MySQL 5.7.22 / Puma 
   - GitHub
+  - heroku
   - AWS(S3)
  ## 開発環境
   - VScode
 
 ## 設計書
 
-## インフラ構成図
-![PF_最新インフラ構成図](https://user-images.githubusercontent.com/79072615/131221620-c709739c-9476-4acc-b545-7cb52dd90524.png)
+## ER図
+[ER図.pdf](https://github.com/Jun-Tagami/beginner-s-butcher-shop/files/7612947/ER.pdf)
 
 ## 特に工夫・意識した点
 
