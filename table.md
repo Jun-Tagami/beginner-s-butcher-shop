@@ -42,7 +42,6 @@
 | user             | references | null: false, foreign_key: true |
 | item             | references | null: false, foreign_key: true |
 | amount           | integer    | null: false                    |
-| payment          | integer    | null: false                    |
 | hope_date        | reference  | null: false                    |
 | hope_time        | integer    | null: false                    |
 | order_name       | string     |                                |
@@ -55,7 +54,6 @@
 
 - belongs_to :user
 - belongs_to :item
-- belongs_to :address
 
 
 ## owner テーブル

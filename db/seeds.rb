@@ -25,7 +25,7 @@ Owner.create!(
 
 item = Item.new(
 name:'test',
-amount:'2kg当り',
+amount:'2kg',
 price:'2',
 detail:'test',
 locality:'test',
