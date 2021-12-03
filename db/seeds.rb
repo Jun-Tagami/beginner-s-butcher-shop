@@ -11,11 +11,11 @@
 User.create!(
 company_name: 'test',
 company_tel: '000000000',
-email: '444@444',
+email: '111@111',
 zip_code: '111-1111',
 prefecture_id: '2',
 address: 'test',
-password: '111111a'
+password: '123456a'
 )
 
 Owner.create!(
