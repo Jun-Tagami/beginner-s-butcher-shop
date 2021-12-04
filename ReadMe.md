@@ -75,4 +75,3 @@ https://tag-portfolio-production.herokuapp.com/owners/dashboard
 https://o-dan.net/ja/<br />
 https://www.photo-ac.com/<br />
 https://pixta.jp/?waad=u1vrgKa0&gclid=Cj0KCQiAnaeNBhCUARIsABEee8XT1WS7_6HOgsjSpmsIvGwYJMhS62cMkKo_FsMCbTNwMdHJV8WZBXUaAu7qEALw_wcB
-https://gyazo.com/3610ed57ba6d8a12cbad2c04fd01f965
